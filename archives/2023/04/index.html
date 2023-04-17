@@ -1740,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1681736628949),
+    lastupdate: new Date(1681741294171),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2356,9 +2356,88 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/04/17/在终端中浏览网页/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="meowjiao">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="meowjiao">
+    <meta itemprop="description" content="meowjiao-blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/04/17/%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5/"  itemprop="url">
+        在终端中浏览网页
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [Linux] 在终端中浏览网页
+推荐两个终端浏览器, w3m和browsh.
+
+w3m:
+安装
+1sudo pacman -S w3m
+
+使用
+1w3m &#123;url&#125;
+
+截图
+
+优点
+元素看得很清楚.
+缺点
+失去了原网页排版.
+
+browsh:
+安装
+1sudo pacman -S browsh
+
+使用
+1browsh --startup-url &#123;url&#1...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-04-17T21:45:41+08:00">2023-04-17</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/04/17/%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2389,13 +2468,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法] [栈] 括号匹配
+        [数据结构] [栈] 括号匹配
 题目描述:
+题目
 假设表达式中允许包含圆括号和方括号两种括号, 其嵌套的顺序随意, 如()或[([][])]等为正确的匹配, [(])或(或(()))均为错误的匹配.
 本题的任务是检验一个给定的表达式中的括号是否匹配正确.
 输入一个只包含圆括号和方括号的字符串, 判断字符串中的括号是否匹配, 匹配就输出”OK”, 不匹配就输出”Wrong”.
-输入描述:
-一行字符, 只...
+输入描述
+一行字...
       
     
   </div>

@@ -39,11 +39,11 @@
 <meta property="og:title" content="括号匹配">
 <meta property="og:url" content="https://meowjiao321.github.io/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/index.html">
 <meta property="og:site_name" content="meowjiao">
-<meta property="og:description" content="[算法] [栈] 括号匹配 题目描述: 假设表达式中允许包含圆括号和方括号两种括号, 其嵌套的顺序随意, 如()或[([][])]等为正确的匹配, [(])或(或(()))均为错误的匹配. 本题的任务是检验一个给定的表达式中的括号是否匹配正确. 输入一个只包含圆括号和方括号的字符串, 判断字符串中的括号是否匹配, 匹配就输出”OK”, 不匹配就输出”Wrong”. 输入描述: 一行字符, 只含有圆">
+<meta property="og:description" content="[数据结构] [栈] 括号匹配 题目描述: 题目 假设表达式中允许包含圆括号和方括号两种括号, 其嵌套的顺序随意, 如()或[([][])]等为正确的匹配, [(])或(或(()))均为错误的匹配. 本题的任务是检验一个给定的表达式中的括号是否匹配正确. 输入一个只包含圆括号和方括号的字符串, 判断字符串中的括号是否匹配, 匹配就输出”OK”, 不匹配就输出”Wrong”. 输入描述 一行字符,">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-04-16T14:00:00.000Z">
-<meta property="article:modified_time" content="2023-04-16T14:17:56.160Z">
+<meta property="article:modified_time" content="2023-04-17T13:57:46.050Z">
 <meta property="article:author" content="meowjiao">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1742,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1681736628949),
+    lastupdate: new Date(1681741294171),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2376,7 +2376,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">meowjiao</p>
   </a>
 </div>
@@ -2415,14 +2415,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="算法-栈-括号匹配"><a href="#算法-栈-括号匹配" class="headerlink" title="[算法] [栈] 括号匹配"></a>[算法] [栈] 括号匹配</h1><hr>
+    <h1 id="数据结构-栈-括号匹配"><a href="#数据结构-栈-括号匹配" class="headerlink" title="[数据结构] [栈] 括号匹配"></a>[数据结构] [栈] 括号匹配</h1><hr>
 <p>题目描述:</p>
+<p>题目</p>
 <p>假设表达式中允许包含圆括号和方括号两种括号, 其嵌套的顺序随意, 如(<a href=""></a>)或[([][])]等为正确的匹配, [(])或(<a href=""></a>或(()))均为错误的匹配.</p>
 <p>本题的任务是检验一个给定的表达式中的括号是否匹配正确.</p>
 <p>输入一个只包含圆括号和方括号的字符串, 判断字符串中的括号是否匹配, 匹配就输出”OK”, 不匹配就输出”Wrong”.</p>
-<p>输入描述:</p>
+<p>输入描述</p>
 <p>一行字符, 只含有圆括号和方括号, 个数小于255.</p>
-<p>输出描述:</p>
+<p>输出描述</p>
 <p>匹配就输出一行文本”OK”, 不匹配就输出一行文本”Wrong”</p>
 <hr>
 <p>样例:</p>
@@ -2515,10 +2516,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-16T22:17:56+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-17T21:57:46+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 16, 2023</p>
+    <p>更新于：Apr 17, 2023</p>
   </a>
 </div>
 
@@ -2593,6 +2594,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2023/04/17/%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>在终端中浏览网页</p>
+          <p class='content'>[Linux] 在终端中浏览网页
+推荐两个终端浏览器, w3m和browsh.
+
+w3m:
+安装
+1sudo pacman -S w3m
+
+使用
+1w3m &#123;url&#125;
+
+截图...</p>
+        </a>
       
       
         <a class='next' href='/2023/04/16/%E6%88%91%E7%9A%84%E6%A1%8C%E9%9D%A2/'>
@@ -3170,7 +3186,7 @@ Arch i...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"meowjiao","url":"https://meowjiao321.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://meowjiao321.github.io/","sameAs":["https://github.com/volantis-x"],"description":"meowjiao-blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://meowjiao321.github.io/","name":"meowjiao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://meowjiao321.github.io/2023/04/16/括号匹配/","name":"括号匹配"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"meowjiao","url":"https://meowjiao321.github.io/","keywords":null,"description":"meowjiao-blog","author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://meowjiao321.github.io/","description":"meowjiao-blog"},"publisher":{"@type":"Organization","name":"meowjiao","url":"https://meowjiao321.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://meowjiao321.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"括号匹配","description":"meowjiao-blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://meowjiao321.github.io/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/"},"author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://meowjiao321.github.io/"},"publisher":{"@type":"Organization","name":"meowjiao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://meowjiao321.github.io/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/","wordCount":0,"datePublished":"2023-04-16T14:00:00.000Z","dateModified":"2023-04-16T14:17:56.160Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"meowjiao","url":"https://meowjiao321.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://meowjiao321.github.io/","sameAs":["https://github.com/volantis-x"],"description":"meowjiao-blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://meowjiao321.github.io/","name":"meowjiao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://meowjiao321.github.io/2023/04/16/括号匹配/","name":"括号匹配"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"meowjiao","url":"https://meowjiao321.github.io/","keywords":null,"description":"meowjiao-blog","author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://meowjiao321.github.io/","description":"meowjiao-blog"},"publisher":{"@type":"Organization","name":"meowjiao","url":"https://meowjiao321.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://meowjiao321.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"括号匹配","description":"meowjiao-blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://meowjiao321.github.io/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/"},"author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://meowjiao321.github.io/"},"publisher":{"@type":"Organization","name":"meowjiao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://meowjiao321.github.io/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/","wordCount":0,"datePublished":"2023-04-16T14:00:00.000Z","dateModified":"2023-04-17T13:57:46.050Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
