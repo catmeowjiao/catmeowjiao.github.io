@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://catmeowjiao.github.io/"/>
+  
+  <link rel="canonical" href="https://catmeowjiao.github.io/2023/07/09/奶牛日光浴/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,17 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>meowjiao</title>
-  <meta name="keywords" content="">
+  <title>奶牛日光浴 - meowjiao</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="meowjiao-blog - meowjiao - meowjiao">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="meowjiao">
-<meta property="og:url" content="https://catmeowjiao.github.io/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="奶牛日光浴">
+<meta property="og:url" content="https://catmeowjiao.github.io/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/index.html">
 <meta property="og:site_name" content="meowjiao">
-<meta property="og:description" content="meowjiao-blog">
+<meta property="og:description" content="[算法思想] [贪心] 奶牛日光浴题目  有C头奶牛进行日光浴, 第i头奶牛需要minSPF[i]到maxSPF[i]单位强度之间的阳光.每头奶牛在日光浴前必须涂防晒霜, 防晒霜有L种, 涂上第i种之后, 身体接收到的阳光强度就会稳定为SPF[i], 第i种防晒霜有cover[i]瓶, 求最多可以满足多少头奶牛进行日光浴.  思路 先排序: 对于奶牛, 按照最小阳光强度降序排序; 对于防晒霜, 按">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-07-09T12:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-09T14:22:34.949Z">
 <meta property="article:author" content="meowjiao">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2164,7 +2166,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2297,7 +2299,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="full" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2336,7 +2338,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </div>
 
-        <div id="scroll-down" style="display: ;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
     
   
@@ -2346,33 +2348,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/09/奶牛日光浴/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
@@ -2382,443 +2358,225 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="meowjiao-blog">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         奶牛日光浴
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [算法思想] [贪心] 奶牛日光浴题目
-
-有C头奶牛进行日光浴, 第i头奶牛需要minSPF[i]到maxSPF[i]单位强度之间的阳光.每头奶牛在日光浴前必须涂防晒霜, 防晒霜有L种, 涂上第i种之后, 身体接收到的阳光强度就会稳定为SPF[i], 第i种防晒霜有cover[i]瓶, 求最多可以满足多少头奶牛进行日光浴.
-
-思路
-先排序:
-对于奶牛, 按照最小阳光强度降序排序;
-对于防晒霜...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-07-09T20:00:00+08:00">2023-07-09</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">meowjiao</p>
+  </a>
 </div>
 
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-07-09T20:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 9, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="算法思想-贪心-奶牛日光浴"><a href="#算法思想-贪心-奶牛日光浴" class="headerlink" title="[算法思想] [贪心] 奶牛日光浴"></a>[算法思想] [贪心] 奶牛日光浴</h1><p><strong>题目</strong></p>
+<blockquote>
+<p>有C头奶牛进行日光浴, 第i头奶牛需要minSPF[i]到maxSPF[i]单位强度之间的阳光.每头奶牛在日光浴前必须涂防晒霜, 防晒霜有L种, 涂上第i种之后, 身体接收到的阳光强度就会稳定为SPF[i], 第i种防晒霜有cover[i]瓶, 求最多可以满足多少头奶牛进行日光浴.</p>
+</blockquote>
+<p><strong>思路</strong></p>
+<p>先排序:</p>
+<p>对于奶牛, 按照最小阳光强度降序排序;</p>
+<p>对于防晒霜, 按照阳光强度降序排序.</p>
+<p>然后遍历每一个奶牛, 找到阳光强度最高且满足条件的防晒霜, 这样可以让后面的奶牛有更多选择空间.</p>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> c,l,ans;</span><br><span class="line">pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; a[<span class="number">2510</span>],b[<span class="number">2510</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; a,pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.first &gt; b.first;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; c &gt;&gt; l;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= c;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; a[i].first &gt;&gt; a[i].second;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= l;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; b[i].first &gt;&gt; b[i].second;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(a + <span class="number">1</span>,a + c + <span class="number">1</span>,cmp); <span class="comment">// 对奶牛进行排序.</span></span><br><span class="line">    <span class="built_in">sort</span>(b + <span class="number">1</span>,b + l + <span class="number">1</span>,cmp); <span class="comment">// 对防晒霜进行排序.</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= c;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= l;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (b[j].first &gt;= a[i].first &amp;&amp; b[j].first &lt;= a[i].second &amp;&amp; b[j].second)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 找到阳光强度最高且满足条件的防晒霜.</span></span><br><span class="line">                ans++; <span class="comment">// 满足条件的奶牛数量加1.</span></span><br><span class="line">                b[j].second--; <span class="comment">// 当前奶牛使用的防晒霜数量减1.</span></span><br><span class="line">                <span class="keyword">break</span>; <span class="comment">// 继续遍历下一头奶牛.</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>©2023 meowjiao</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class='copyright'>
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href="https://catmeowjiao.github.io/2023/07/09/奶牛日光浴/">https://catmeowjiao.github.io/2023/07/09/奶牛日光浴/</a></p>
+                
+              
+            </blockquote>
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/09/Crossing-River/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/09/Crossing-River/"  itemprop="url">
-        Crossing River
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-09T22:22:34+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 9, 2023</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        [算法思想] [贪心] Crossing River贪心
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://catmeowjiao.github.io/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/&title=奶牛日光浴 - meowjiao&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://catmeowjiao.github.io/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/&title=奶牛日光浴 - meowjiao&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://catmeowjiao.github.io/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/&title=奶牛日光浴 - meowjiao&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/07/09/Crossing-River/'>
+          <p class='title'>Crossing River<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[算法思想] [贪心] Crossing River贪心
 
 贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.
 
 题目
 
-几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.
-
-思路
-先分析一下样例.
-
-41 2 5 10
-
-对于这个样例, 我们可以进行如下的操作:
-
-(1) 1和2...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-07-09T09:56:15+08:00">2023-07-09</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/07/09/Crossing-River/' itemprop="url">
-            Read More
-          </a>
-        </div>
+几...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/06/24/可达鸭J2知识总结/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"  itemprop="url">
-        可达鸭J2知识总结
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        思维导图
-
-图的存储与遍历
-邻接矩阵实现方式: 通过数组存储边.若i和j有一条单向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 0;若i和j有一条双向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 1.
-题目
-输入一个无向图的信息, 输出图的邻接矩阵和与顶点t直接相连的顶点的个数及邻接点.
-代码
-123456789...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-24T11:00:00+08:00">2023-06-24</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
   
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/06/24/Codeforces-Round-835-Div-4/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/24/Codeforces-Round-835-Div-4/"  itemprop="url">
-        Codeforces Round 835(Div.4)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        D
-E
-G
-
-©2023 meowjiao
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-24T09:00:00+08:00">2023-06-24</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/24/Codeforces-Round-835-Div-4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
   
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/05/19/树的直径/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/19/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/"  itemprop="url">
-        树的直径
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-概念
-题目描述
-思路
-代码
 
-[数据结构] [树] 树的直径概念1在一棵树中, 从所有可能的点对中找到两个相距最远的点, 这两个点之间的路径的长度就是这棵树的直径.
-
-题目描述题目
-123给定一棵树, 树中包含n个结点(编号1~n)和n-1条无向边, 每条边都有一个权值.现在请你找到树中的一条路径, 使得路径两端的点的距离最远.注意: 路径中可以只包含一个点.
-
-输入
-12第一行包含整数n...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-19T20:00:00+08:00">2023-05-19</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/19/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/04/28/恢复二叉搜索树/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/04/28/%E6%81%A2%E5%A4%8D%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"  itemprop="url">
-        恢复二叉搜索树
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [数据结构] [树] 恢复二叉搜索树
-题目描述
-题目
-给你一棵二叉搜索树的信息, 该树中的两个节点的值被错误地交换.请你找到这两个点并将其恢复成正确的结构.
-输入
-第一行输入一个整数n, 表示接下来要输入n个数据;
-第二行输入n个数据ai, 第i个数字表示第i个节点的数值为ai.(-2^31&lt;&#x3D;ai&lt;&#x3D;2^31-1), 如果输入的为0, 表示这个位置没有节点....
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T18:00:00+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/04/28/%E6%81%A2%E5%A4%8D%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/04/16/括号匹配/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/"  itemprop="url">
-        括号匹配
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [数据结构] [栈] 括号匹配
-题目描述
-题目
-假设表达式中允许包含圆括号和方括号两种括号, 其嵌套的顺序随意, 如()或[([][])]等为正确的匹配, [(])或(或(()))均为错误的匹配.
-本题的任务是检验一个给定的表达式中的括号是否匹配正确.
-输入一个只包含圆括号和方括号的字符串, 判断字符串中的括号是否匹配, 匹配就输出”OK”, 不匹配就输出”Wrong”.
-输入
-一行字符, ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-16T22:00:00+08:00">2023-04-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
 </div>
@@ -2829,97 +2587,48 @@ G
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">meowjiao</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2954,7 +2663,7 @@ G
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2963,15 +2672,15 @@ G
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="full";
-      cover_wrapper.style.display="";
-      scroll_down.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
+      scroll_down.style.display="none";
     
   
 </script>
@@ -3419,7 +3128,7 @@ G
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"meowjiao-blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://catmeowjiao.github.io/","name":"meowjiao"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"meowjiao","url":"https://catmeowjiao.github.io/","keywords":null,"description":"meowjiao-blog","author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","description":"meowjiao-blog"},"publisher":{"@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://catmeowjiao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"meowjiao-blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/"},"publisher":{"@type":"Organization","name":"meowjiao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"meowjiao-blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://catmeowjiao.github.io/","name":"meowjiao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://catmeowjiao.github.io/2023/07/09/奶牛日光浴/","name":"奶牛日光浴"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"meowjiao","url":"https://catmeowjiao.github.io/","keywords":null,"description":"meowjiao-blog","author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","description":"meowjiao-blog"},"publisher":{"@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://catmeowjiao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"奶牛日光浴","description":"meowjiao-blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://catmeowjiao.github.io/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/"},"author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/"},"publisher":{"@type":"Organization","name":"meowjiao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://catmeowjiao.github.io/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/","wordCount":0,"datePublished":"2023-07-09T12:00:00.000Z","dateModified":"2023-07-09T14:22:34.949Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
