@@ -1740,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1688790334727),
+    lastupdate: new Date(1688872070508),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2364,13 +2364,141 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
-          
-        
-          
-        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/07/09/Crossing-River/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="meowjiao">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="meowjiao">
+    <meta itemprop="description" content="meowjiao-blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/07/09/Crossing-River/"  itemprop="url">
+        Crossing River
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [算法思想] [贪心] Crossing River贪心
+
+贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.
+
+题目
+
+几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.
+
+思路
+先分析一下样例.
+
+41 2 5 10
+
+对于这个样例, 我们可以进行如下的操作:
+
+(1) 1和2...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-07-09T09:56:15+08:00">2023-07-09</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/07/09/Crossing-River/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/06/24/可达鸭J2知识总结/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="meowjiao">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="meowjiao">
+    <meta itemprop="description" content="meowjiao-blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"  itemprop="url">
+        可达鸭J2知识总结
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        思维导图
+
+图的存储与遍历
+邻接矩阵实现方式: 通过数组存储边.若i和j有一条单向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 0;若i和j有一条双向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 1.
+题目
+输入一个无向图的信息, 输出图的邻接矩阵和与顶点t直接相连的顶点的个数及邻接点.
+代码
+123456789...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-06-24T11:00:00+08:00">2023-06-24</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2414,136 +2542,12 @@ G
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-06-24T13:57:15+08:00">2023-06-24</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-06-24T09:00:00+08:00">2023-06-24</time>
         
       </div>
       
         <div>
           <a class='readmore' href='/2023/06/24/Codeforces-Round-835-Div-4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/06/20/可达鸭J2知识总结/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/20/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"  itemprop="url">
-        可达鸭J2知识总结
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        思维导图
-
-图的存储与遍历
-邻接矩阵实现方式: 通过数组存储边.若i和j有一条单向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 0;若i和j有一条双向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 1.
-题目
-输入一个无向图的信息, 输出图的邻接矩阵和与顶点t直接相连的顶点的个数及邻接点.
-代码
-123456789...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-20T19:00:00+08:00">2023-06-20</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/20/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/06/18/WWDC23/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/18/WWDC23/"  itemprop="url">
-        WWDC23
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        WWDC23
-导语
-在最近的WWDC23上, Apple Inc.发布了一些产品, 比如macOS 14、iOS 17等.
-我最关心的是Apple Vision Pro.
-下面, 我来说说我对这款产品的看法.
-正文
-Apple Vision Pro是一款MR(混合现实)设备, 其配备了12颗摄像头, 因此, 它有眼动交互和手势操作等功能.
-它配备的Vision OS是苹果的第一款空间操作系统...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-18T22:00:00+08:00">2023-06-18</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/18/WWDC23/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2687,88 +2691,6 @@ Apple Vision Pro是一款MR(混合现实)设备, 其配备了12颗摄像头, 因
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/04/17/在终端中浏览网页/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/04/17/%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5/"  itemprop="url">
-        在终端中浏览网页
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [Linux] 在终端中浏览网页
-推荐两个终端浏览器, w3m和browsh.
-
-w3m:
-安装
-1sudo pacman -S w3m
-
-使用
-1w3m [url]
-
-截图
-
-优点
-元素看得很清楚.
-缺点
-失去了原网页排版.
-
-browsh:
-安装
-1sudo pacman -S browsh
-
-使用
-1browsh --startup-url [url]
-
-截图
-
-优点
-使用firefo...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-17T21:00:00+08:00">2023-04-17</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/04/17/%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/04/16/括号匹配/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
@@ -2816,70 +2738,6 @@ browsh:
       
         <div>
           <a class='readmore' href='/2023/04/16/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://meowjiao321.github.io/2023/04/16/我的桌面/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/04/16/%E6%88%91%E7%9A%84%E6%A1%8C%E9%9D%A2/"  itemprop="url">
-        我的桌面
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [Linux] 我的桌面
-我的Arch Linux + Xfce4的桌面, 使用WhiteSur-Dark-Solid主题 + Flat-Remix-Blue-Dark图标.
-
-
-
-Arch is the best.
-K.I.S.S.
-
-©2023 meowjiao
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-16T20:00:00+08:00">2023-04-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/04/16/%E6%88%91%E7%9A%84%E6%A1%8C%E9%9D%A2/' itemprop="url">
             Read More
           </a>
         </div>
