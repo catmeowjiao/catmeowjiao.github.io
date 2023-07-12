@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://catmeowjiao.github.io/2023/06/24/可达鸭j2知识总结/"/>
+  <link rel="canonical" href="https://catmeowjiao.github.io/2023/07/12/传纸条/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,19 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>可达鸭J2知识总结 - meowjiao</title>
+  <title>传纸条 - meowjiao</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="meowjiao-blog - meowjiao - meowjiao">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="可达鸭J2知识总结">
-<meta property="og:url" content="https://catmeowjiao.github.io/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="传纸条">
+<meta property="og:url" content="https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/index.html">
 <meta property="og:site_name" content="meowjiao">
-<meta property="og:description" content="思维导图  图的存储与遍历 邻接矩阵实现方式: 通过数组存储边.若i和j有一条单向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 0;若i和j有一条双向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 1. 题目 输入一个无向图的信息, 输出图的邻接矩阵和与顶点t直接相连的顶点的个数及邻接点. 代码 123456789101">
+<meta property="og:description" content="[算法] [动态规划] [传纸条]题目  小渊和小轩是好朋友也是同班同学, 他们在一起总有谈不完的话题.一次素质拓展活动中, 班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端, 因此, 他们就无法直接交谈了.幸运的是, 他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里, 小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角, 坐标(m,n).从小渊传">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-06-24T03:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-09T03:07:32.616Z">
+<meta property="article:published_time" content="2023-07-12T03:54:09.000Z">
+<meta property="article:modified_time" content="2023-07-12T04:51:41.388Z">
 <meta property="article:author" content="meowjiao">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2349,7 +2349,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/06/24/可达鸭J2知识总结/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/12/传纸条/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2370,7 +2370,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        可达鸭J2知识总结
+        传纸条
       </h1>
       <div class='new-meta-box'>
         
@@ -2391,10 +2391,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-24T11:00:00+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-07-12T11:54:09+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 24, 2023</p>
+    <p>发布于：Jul 12, 2023</p>
   </a>
 </div>
 
@@ -2417,50 +2417,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h3 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h3><p><img src="/files/6.png" class="lazyload" data-srcset="/files/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="6.png"></p>
+    <h1 id="算法-动态规划-传纸条"><a href="#算法-动态规划-传纸条" class="headerlink" title="[算法] [动态规划] [传纸条]"></a>[算法] [动态规划] [传纸条]</h1><p><strong>题目</strong></p>
+<blockquote>
+<p>小渊和小轩是好朋友也是同班同学, 他们在一起总有谈不完的话题.一次素质拓展活动中, 班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端, 因此, 他们就无法直接交谈了.幸运的是, 他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里, 小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角, 坐标(m,n).从小渊传到小轩的纸条只可以向下或者向右传递, 从小轩传给小渊的纸条只可以向上或者向左传递.在活动进行中, 小渊希望给小轩传递一张纸条, 同时希望小轩给他回复.班里每个同学都可以帮他们传递, 但只会帮他们一次, 也就是说如果此人在小渊递给小轩纸条的时候帮忙, 那么在小轩递给小渊的时候就不会再帮忙.反之亦然.还有一件事情需要注意, 全班每个同学愿意帮忙的好感度有高有低(注意: 小渊和小轩的好心程度没有定义, 输入时用0表示), 可以用一个0-100的自然数来表示, 数越大表示越好心.小渊和小轩希望尽可能找好心程度高的同学来帮忙传纸条, 即找到来回两条传递路径, 使得这两条路径上同学的好心程度之和最大.现在, 请你帮助小渊和小轩找到这样的两条路径.</p>
+</blockquote>
+<p><strong>思路</strong></p>
+<p>这道题的难点在于要找两条路径.</p>
+<p>如果我们进行两次DP, 路径可能重叠.</p>
+<p>所以我们换个思路, 让两张纸条同时传递, 并且让两张纸条都变成从小渊传递到小轩, 转变对答案没有影响.</p>
 <ul>
-<li><h1 id="图的存储与遍历"><a href="#图的存储与遍历" class="headerlink" title="图的存储与遍历"></a>图的存储与遍历</h1><ul>
-<li><h2 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h2><p>实现方式: 通过数组存储边.若i和j有一条单向边, 则a<sub>i j</sub> &#x3D;&#x3D; 1, a<sub>j i</sub> &#x3D;&#x3D; 0;若i和j有一条双向边, 则a<sub>i j</sub> &#x3D;&#x3D; 1, a<sub>j i</sub> &#x3D;&#x3D; 1.</p>
-<p><strong>题目</strong></p>
-<p>输入一个无向图的信息, 输出图的邻接矩阵和与顶点t直接相连的顶点的个数及邻接点.</p>
-<p><strong>代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,k,x,y,z,t,cnt,a[<span class="number">60</span>][<span class="number">60</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= k;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</span><br><span class="line">        a[x][y] = z;</span><br><span class="line">        a[y][x] = z;</span><br><span class="line">    &#125;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; a[i][j] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[t][i])</span><br><span class="line">        &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; cnt &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[t][i])</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>四维DP</p>
+<p>使用一个四维数组d, d(i, j, k, l)表示纸条1在(i, j), 纸条2在(k, l).</p>
+<p>状态转移方程: d(i, j, k, l) &#x3D; max(d(i - 1, j, k - 1, l), d(i - 1, j, k, l - 1), d(i, j - 1, k - 1, l), d(i, j - 1, k, l - 1)) + a(i, j) + a(k, l)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法时间复杂度较高, 可能超时.</p>
 </li>
-<li><h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><p>实现方式:</p>
-<ul>
-<li><p>一维数组实现: 使用三个数组和一个变量, 数组head存储顶点相连的边, 数组ver存储边的终点, 数组nxt存储下一条与顶点相连的边, 变量index存储边的序号.若有权值, 使用we数组存储边对应的权值.</p>
-<p><img src="/files/5.png" class="lazyload" data-srcset="/files/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="5.png"></p>
-<p><strong>题目</strong></p>
-<p>给定一个有权无向图的信息, 按照前插法的方式输出每个节点的邻接点.</p>
-<p><strong>代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,x,y,z,index,head[<span class="number">100010</span>],ver[<span class="number">100010</span>],nxt[<span class="number">100010</span>],we[<span class="number">100010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ver[++index] = y;</span><br><span class="line">    nxt[index] = head[x];</span><br><span class="line">    we[index] = z;</span><br><span class="line">    head[x] = index;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</span><br><span class="line">        <span class="built_in">add</span>(x,y,z);</span><br><span class="line">        <span class="built_in">add</span>(y,x,z);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; i &lt;&lt; <span class="string">&quot;: &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (!head[i])</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;zero&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = head[i];j;j = nxt[j])</span><br><span class="line">            &#123;</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;(&quot;</span> &lt;&lt; ver[j] &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; we[j] &lt;&lt; <span class="string">&quot;) &quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>三维DP</p>
+<p>我们发现i + j &#x3D;&#x3D; k + l, 所以增加一维s来保存i + j, 减掉保存j和l的两维, 用s - i代替j, s - k代替l.</p>
+<p>状态转移方程: max(d(s - 1, i, k), d(s - 1, i - 1, k), d(s - 1, i, k - 1), d(s - 1,i - 1,k - 1)) + a(i, s - i) + a(k, s - k)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法会使时间复杂度变小, 但代价是空间会变大.</p>
 </li>
-<li><p>动态数组实现: 使用一个二维动态数组v存顶点和边的终点, 若要建一条从i到j的有向边, 则<code>v[i].push_back(j);</code>.若有权值, 则使用pair类型的二维动态数组.</p>
-<p><strong>题目</strong></p>
-<p>给定一个有权无向图的信息, 按照前插法的方式输出每个节点的邻接点.</p>
-<p><strong>代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,x,y,z;</span><br><span class="line">vector&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; v[<span class="number">100010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</span><br><span class="line">        v[x].<span class="built_in">push_back</span>(<span class="built_in">make_pair</span>(y,z));</span><br><span class="line">        v[y].<span class="built_in">push_back</span>(<span class="built_in">make_pair</span>(x,z));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; i &lt;&lt; <span class="string">&quot;: &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (!v[i].<span class="built_in">size</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;zero&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = v[i].<span class="built_in">size</span>() - <span class="number">1</span>;j &gt;= <span class="number">0</span>;j--)</span><br><span class="line">            &#123;</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;(&quot;</span> &lt;&lt; v[i][j].first &lt;&lt; <span class="string">&quot;,&quot;</span> &lt;&lt; v[i][j].second &lt;&lt; <span class="string">&quot;) &quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
+<li><p>二维DP</p>
+<p>我们发现三维DP的状态转移方程只和d(s - 1)有关, 所以可以利用滚动数组, 去掉s这一维.</p>
+<p>不过在枚举的时候还是要枚举s, 并且i和k要倒序枚举, 防止某个状态的转移元素在状态转移前被修改.</p>
+<p>状态转移方程: max(d(i, k), d(i - 1, k), d(i, k - 1), d(i - 1,k - 1)) + a(i, s - i) + a(k, s - k)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法会使空间变小.</p>
 </li>
 </ul>
-</li>
-<li><h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><ul>
-<li><p>深度优先搜索</p>
-<p>实现方式: 使用递归, 在图中沿一条路径一直往下走, 无路可走时回溯.</p>
-<p><strong>题目</strong></p>
-<p>读入一个无向图的邻接矩阵, 按照深度优先搜索的方式遍历所有顶点, 输出遍历顶点的顺序.</p>
 <p><strong>代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,a[<span class="number">60</span>][<span class="number">60</span>];</span><br><span class="line"><span class="type">bool</span> flag[<span class="number">60</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    flag[x] = <span class="literal">true</span>;</span><br><span class="line">    cout &lt;&lt; x - <span class="number">1</span> &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[x][i] &amp;&amp; !flag[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">dfs</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!flag[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">dfs</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>广度优先搜索</p>
-<p>实现方式: 使用队列, 在图中同时走多条路线.</p>
-<p><strong>题目</strong></p>
-<p>读入一个无向图的邻接矩阵, 按照广度优先搜索的方式遍历所有顶点, 输出遍历顶点的顺序.</p>
-<p><strong>代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,tmp,a[<span class="number">60</span>][<span class="number">60</span>];</span><br><span class="line"><span class="type">bool</span> flag[<span class="number">60</span>];</span><br><span class="line">queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    q.<span class="built_in">push</span>(x);</span><br><span class="line">    flag[x] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        tmp = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        cout &lt;&lt; tmp - <span class="number">1</span> &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[tmp][i] &amp;&amp; !flag[i])</span><br><span class="line">            &#123;</span><br><span class="line">                q.<span class="built_in">push</span>(i);</span><br><span class="line">                flag[i] = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">bfs</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> m,n,a[<span class="number">60</span>][<span class="number">60</span>],d[<span class="number">60</span>][<span class="number">60</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> s = <span class="number">3</span>;s &lt; m + n;s++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 终点不用DP.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = m - <span class="number">1</span>;i &gt;= <span class="number">1</span>;i--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = m;j &gt; i;j--)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (s - i &gt;= <span class="number">1</span> &amp;&amp; s - j &gt;= <span class="number">1</span> &amp;&amp; s - i &lt;= n &amp;&amp; s - j &lt;= n)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 若没有越界.</span></span><br><span class="line">                    d[i][j] = <span class="built_in">max</span>(&#123;d[i][j],d[i - <span class="number">1</span>][j - <span class="number">1</span>],d[i - <span class="number">1</span>][j],d[i][j - <span class="number">1</span>]&#125;) + a[i][s - i] + a[j][s - j]; <span class="comment">// 状态转移.</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; d[m - <span class="number">1</span>][m] &lt;&lt; endl; <span class="comment">// 终点没有DP, 所以输出d[m - 1][m];</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <hr>
 <p>©2023 meowjiao</p>
 
@@ -2485,7 +2473,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 
               
                 
-                  <p>本文永久链接是：<a href="https://catmeowjiao.github.io/2023/06/24/可达鸭J2知识总结/">https://catmeowjiao.github.io/2023/06/24/可达鸭J2知识总结/</a></p>
+                  <p>本文永久链接是：<a href="https://catmeowjiao.github.io/2023/07/12/传纸条/">https://catmeowjiao.github.io/2023/07/12/传纸条/</a></p>
                 
               
             </blockquote>
@@ -2504,10 +2492,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-09T11:07:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-12T12:51:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 9, 2023</p>
+    <p>更新于：Jul 12, 2023</p>
   </a>
 </div>
 
@@ -2526,7 +2514,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://catmeowjiao.github.io/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/&title=可达鸭J2知识总结 - meowjiao&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/&title=传纸条 - meowjiao&summary="
           
           >
           
@@ -2538,7 +2526,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://catmeowjiao.github.io/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/&title=可达鸭J2知识总结 - meowjiao&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/&title=传纸条 - meowjiao&summary="
           
           >
           
@@ -2550,7 +2538,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://catmeowjiao.github.io/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/&title=可达鸭J2知识总结 - meowjiao&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/&title=传纸条 - meowjiao&summary="
           
           >
           
@@ -2583,26 +2571,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/07/09/Crossing-River/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Crossing River</p>
-          <p class='content'>[算法思想] [贪心] Crossing River贪心
-
-贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.
-
-题目
-
-几...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/06/24/Codeforces-Round-835-Div-4/'>
-          <p class='title'>Codeforces Round 835(Div.4)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>D
-E
-G
+        <a class='next' href='/2023/07/11/%E5%8A%A0%E6%B2%B9%E9%97%AE%E9%A2%98/'>
+          <p class='title'>加油问题<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>[算法思想] [贪心] 加油问题题目
 
-©2023 meowjiao
-</p>
+你需要驾驶一辆卡车行驶L单位的距离.最开始时, 卡车上有P单位的汽油.卡车每开1单位距离需要消耗1单位的汽油.如果在途中车上的汽油耗尽, 卡车就无法继续前...</p>
         </a>
       
     </div>
@@ -2649,7 +2623,7 @@ G
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-text">思维导图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5"><span class="toc-text">邻接矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8"><span class="toc-text">邻接表</span></a></li></ol>
+        
     </div>
   </section>
 
@@ -3170,7 +3144,7 @@ G
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"meowjiao-blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://catmeowjiao.github.io/","name":"meowjiao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://catmeowjiao.github.io/2023/06/24/可达鸭J2知识总结/","name":"可达鸭J2知识总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"meowjiao","url":"https://catmeowjiao.github.io/","keywords":null,"description":"meowjiao-blog","author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","description":"meowjiao-blog"},"publisher":{"@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://catmeowjiao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"可达鸭J2知识总结","description":"meowjiao-blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://catmeowjiao.github.io/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/"},"publisher":{"@type":"Organization","name":"meowjiao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://catmeowjiao.github.io/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/","wordCount":0,"datePublished":"2023-06-24T03:00:00.000Z","dateModified":"2023-07-09T03:07:32.616Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"meowjiao-blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://catmeowjiao.github.io/","name":"meowjiao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://catmeowjiao.github.io/2023/07/12/传纸条/","name":"传纸条"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"meowjiao","url":"https://catmeowjiao.github.io/","keywords":null,"description":"meowjiao-blog","author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/","description":"meowjiao-blog"},"publisher":{"@type":"Organization","name":"meowjiao","url":"https://catmeowjiao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://catmeowjiao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"传纸条","description":"meowjiao-blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/"},"author":{"@type":"Person","name":"meowjiao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://catmeowjiao.github.io/"},"publisher":{"@type":"Organization","name":"meowjiao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/","wordCount":0,"datePublished":"2023-07-12T03:54:09.000Z","dateModified":"2023-07-12T04:51:41.388Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
