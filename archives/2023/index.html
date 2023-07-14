@@ -1740,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1689258776778),
+    lastupdate: new Date(1689308481441),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2408,7 +2408,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         [算法] [动态规划] 饭卡常见背包代码
 
 01背包
-1234567891011121314151617181920212223#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int m,n,w[40],c[40],d[210];int main()&#123;    cin &gt;&gt; m ...
+状态转移方程: d(j) &#x3D; max(d(j), d(j - w(i)) + c(i))
+代码:
+123456789101112131415161718192021222324#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int m,...
       
     
   </div>
