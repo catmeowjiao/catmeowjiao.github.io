@@ -1740,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1689573074554),
+    lastupdate: new Date(1689652798330),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2376,9 +2376,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/18/最大正方形/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="meowjiao">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="meowjiao">
+    <meta itemprop="description" content="meowjiao-blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/07/18/%E6%9C%80%E5%A4%A7%E6%AD%A3%E6%96%B9%E5%BD%A2/"  itemprop="url">
+        最大正方形
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        [算法] [动态规划] 最大正方形题目
+
+在一个由0和1组成的n * m的二维矩阵内, 找到只包含1的最大正方形的面积.
+
+思路
+这道题目主要难点在于如何建表.
+我们可以用d[i][j]表示这个正方形.
+那如何表示呢?
+如果记录左上角和右下角, 需要四维, 而且很难想到d数组中存储什么.
+我们可以记录右下角, 在d数组中存储正方形边长.
+接下来是状态转移方程.
+d[i][j] = min(&...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-07-18T10:04:35+08:00">2023-07-18</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/07/18/%E6%9C%80%E5%A4%A7%E6%AD%A3%E6%96%B9%E5%BD%A2/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2922,73 +2990,6 @@ d(i, j)和d(i ...
       
         <div>
           <a class='readmore' href='/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/05/19/树的直径/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/19/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/"  itemprop="url">
-        树的直径
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-概念
-题目描述
-思路
-代码
-
-[数据结构] [树] 树的直径概念1在一棵树中, 从所有可能的点对中找到两个相距最远的点, 这两个点之间的路径的长度就是这棵树的直径.
-
-题目描述题目
-123给定一棵树, 树中包含n个结点(编号1~n)和n-1条无向边, 每条边都有一个权值.现在请你找到树中的一条路径, 使得路径两端的点的距离最远.注意: 路径中可以只包含一个点.
-
-输入
-12第一行包含整数n...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-05-19T20:00:00+08:00">2023-05-19</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/05/19/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/' itemprop="url">
             Read More
           </a>
         </div>
