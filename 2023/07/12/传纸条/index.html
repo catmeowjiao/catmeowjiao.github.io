@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"catmeowjiao.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="[算法] [动态规划] 传纸条 题目  小渊和小轩是好朋友也是同班同学, 他们在一起总有谈不完的话题.一次素质拓展活动中, 班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端, 因此, 他们就无法直接交谈了.幸运的是, 他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里, 小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角, 坐标(m,n).从小渊传到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="传纸条">
+<meta property="og:url" content="https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/index.html">
+<meta property="og:site_name" content="meowjiao">
+<meta property="og:description" content="[算法] [动态规划] 传纸条 题目  小渊和小轩是好朋友也是同班同学, 他们在一起总有谈不完的话题.一次素质拓展活动中, 班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端, 因此, 他们就无法直接交谈了.幸运的是, 他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里, 小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角, 坐标(m,n).从小渊传到">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-12T03:54:09.000Z">
+<meta property="article:modified_time" content="2023-10-03T09:27:13.753Z">
+<meta property="article:author" content="meowjiao">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>传纸条 | meowjiao</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">meowjiao</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">meowjiao-blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="meowjiao">
+      <meta itemprop="description" content="meowjiao-blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="meowjiao">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          传纸条
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-07-12 11:54:09" itemprop="dateCreated datePublished" datetime="2023-07-12T11:54:09+08:00">2023-07-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-03 17:27:13" itemprop="dateModified" datetime="2023-10-03T17:27:13+08:00">2023-10-03</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="算法-动态规划-传纸条">[算法] [动态规划] 传纸条</h1>
+<p><strong>题目</strong></p>
+<blockquote>
+<p>小渊和小轩是好朋友也是同班同学,
+他们在一起总有谈不完的话题.一次素质拓展活动中,
+班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端,
+因此, 他们就无法直接交谈了.幸运的是,
+他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里,
+小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角,
+坐标(m,n).从小渊传到小轩的纸条只可以向下或者向右传递,
+从小轩传给小渊的纸条只可以向上或者向左传递.在活动进行中,
+小渊希望给小轩传递一张纸条,
+同时希望小轩给他回复.班里每个同学都可以帮他们传递, 但只会帮他们一次,
+也就是说如果此人在小渊递给小轩纸条的时候帮忙,
+那么在小轩递给小渊的时候就不会再帮忙.反之亦然.还有一件事情需要注意,
+全班每个同学愿意帮忙的好感度有高有低(注意: 小渊和小轩的好心程度没有定义,
+输入时用0表示), 可以用一个0-100的自然数来表示,
+数越大表示越好心.小渊和小轩希望尽可能找好心程度高的同学来帮忙传纸条,
+即找到来回两条传递路径, 使得这两条路径上同学的好心程度之和最大.现在,
+请你帮助小渊和小轩找到这样的两条路径.</p>
+</blockquote>
+<p><strong>思路</strong></p>
+<p>这道题的难点在于要找两条路径.</p>
+<p>如果我们进行两次DP, 路径可能重叠.</p>
+<p>所以我们换个思路, 让两张纸条同时传递,
+并且让两张纸条都变成从小渊传递到小轩, 转变对答案没有影响.</p>
+<ul>
+<li><p>四维DP</p>
+<p>使用一个四维数组d, d(i, j, k, l)表示纸条1在(i, j), 纸条2在(k, l).</p>
+<p>状态转移方程: d(i, j, k, l) = max(d(i - 1, j, k - 1, l), d(i - 1, j,
+k, l - 1), d(i, j - 1, k - 1, l), d(i, j - 1, k, l - 1)) + a(i, j) +
+a(k, l)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法时间复杂度较高, 可能超时.</p></li>
+<li><p>三维DP</p>
+<p>我们发现i + j == k + l, 所以增加一维s来保存i + j, 减掉保存j和l的两维,
+用s - i代替j, s - k代替l.</p>
+<p>状态转移方程: max(d(s - 1, i, k), d(s - 1, i - 1, k), d(s - 1, i, k -
+1), d(s - 1,i - 1,k - 1)) + a(i, s - i) + a(k, s - k)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法会使时间复杂度变小, 但代价是空间会变大.</p></li>
+<li><p>二维DP</p>
+<p>我们发现三维DP的状态转移方程只和d(s - 1)有关, 所以可以利用滚动数组,
+去掉s这一维.</p>
+<p>不过在枚举的时候还是要枚举s, 并且i和k要倒序枚举,
+防止某个状态的转移元素在状态转移前被修改.</p>
+<p>状态转移方程: max(d(i, k), d(i - 1, k), d(i, k - 1), d(i - 1,k - 1))
++ a(i, s - i) + a(k, s - k)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法会使空间变小.</p></li>
+</ul>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> m,n,a[<span class="number">60</span>][<span class="number">60</span>],d[<span class="number">60</span>][<span class="number">60</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> s = <span class="number">3</span>;s &lt; m + n;s++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 终点不用DP.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = m - <span class="number">1</span>;i &gt;= <span class="number">1</span>;i--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = m;j &gt; i;j--)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (s - i &gt;= <span class="number">1</span> &amp;&amp; s - j &gt;= <span class="number">1</span> &amp;&amp; s - i &lt;= n &amp;&amp; s - j &lt;= n)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 若没有越界.</span></span><br><span class="line">                    d[i][j] = <span class="built_in">max</span>(&#123;d[i][j],d[i - <span class="number">1</span>][j - <span class="number">1</span>],d[i - <span class="number">1</span>][j],d[i][j - <span class="number">1</span>]&#125;) + a[i][s - i] + a[j][s - j]; <span class="comment">// 状态转移.</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; d[m - <span class="number">1</span>][m] &lt;&lt; endl; <span class="comment">// 终点没有DP过, 所以输出d[m - 1][m];</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<p>By meowjiao</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/11/%E5%8A%A0%E6%B2%B9%E9%97%AE%E9%A2%98/" rel="prev" title="加油问题">
+      <i class="fa fa-chevron-left"></i> 加油问题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/07/13/%E9%A5%AD%E5%8D%A1/" rel="next" title="饭卡">
+      饭卡 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E4%BC%A0%E7%BA%B8%E6%9D%A1"><span class="nav-number">1.</span> <span class="nav-text">[算法] [动态规划] 传纸条</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">meowjiao</p>
+  <div class="site-description" itemprop="description">meowjiao-blog</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">meowjiao</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
