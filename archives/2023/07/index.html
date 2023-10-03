@@ -1740,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1696321000527),
+    lastupdate: new Date(1696326516809),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2403,18 +2403,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法] [动态规划] 最大正方形题目
+        [算法] [动态规划] 最大正方形
+题目
 
-在一个由0和1组成的n * m的二维矩阵内, 找到只包含1的最大正方形的面积.
+在一个由0和1组成的n * m的二维矩阵内,
+找到只包含1的最大正方形的面积.
 
 思路
 这道题目主要难点在于如何建表.
 我们可以用d[i][j]表示这个正方形.
 那如何表示呢?
-如果记录左上角和右下角, 需要四维, 而且很难想到d数组中存储什么.
+如果记录左上角和右下角, 需要四维,
+而且很难想到d数组中存储什么.
 我们可以记录右下角, 在d数组中存储正方形边长.
 接下来是状态转移方程.
-d[i][j] = min(&...
+d[i][j] = min(...
       
     
   </div>
@@ -2443,7 +2446,7 @@ d[i][j] = min(&...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/16/╛╪╒є┴м│╦/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/16/矩阵连乘/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2461,7 +2464,7 @@ d[i][j] = min(&...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/16/%E2%95%9B%E2%95%AA%E2%95%92%D1%94%E2%94%B4%D0%BC%E2%94%82%E2%95%A6/"  itemprop="url">
+      <a href="/2023/07/16/%E7%9F%A9%E9%98%B5%E8%BF%9E%E4%B9%98/"  itemprop="url">
         矩阵连乘
       </a>
     </h2>
@@ -2469,12 +2472,21 @@ d[i][j] = min(&...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法] [动态规划] 矩阵连乘题目
+        [算法] [动态规划] 矩阵连乘
+题目
 
-矩阵a有n行m列, 矩阵b有x行y列, 如果m = x, 它们相乘将得到n行y列的矩阵, 一次矩阵乘法的运算次数为n * m * y.给出n个矩阵, 每次可将相邻的两个相乘, 求出如何使用最少的次数将n个矩阵合并成一个矩阵, 输出最少次数.输入数据保证相邻的矩阵m = x.
+矩阵a有n行m列,
+矩阵b有x行y列,
+如果m = x,
+它们相乘将得到n行y列的矩阵,
+一次矩阵乘法的运算次数为n * m * y.给出n个矩阵,
+每次可将相邻的两个相乘,
+求出如何使用最少的次数将n个矩阵合并成一个矩阵,
+输出最少次数.输入数据保证相邻的矩阵m = x.
 
 思路
-求n个矩阵合成一个矩阵的最少次数, 得先知道n - 1个矩阵合成一个矩...
+求n个矩阵合成一个矩阵的最少次数,
+得先知道n - 1个矩阵合成一个...
       
     
   </div>
@@ -2487,7 +2499,7 @@ d[i][j] = min(&...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/16/%E2%95%9B%E2%95%AA%E2%95%92%D1%94%E2%94%B4%D0%BC%E2%94%82%E2%95%A6/' itemprop="url">
+          <a class='readmore' href='/2023/07/16/%E7%9F%A9%E9%98%B5%E8%BF%9E%E4%B9%98/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2503,7 +2515,7 @@ d[i][j] = min(&...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/16/╣╔╞▒┬Є┬ЇV/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/16/股票买卖/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2521,7 +2533,7 @@ d[i][j] = min(&...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/16/%E2%95%A3%E2%95%94%E2%95%9E%E2%96%92%E2%94%AC%D0%84%E2%94%AC%D0%87V/"  itemprop="url">
+      <a href="/2023/07/16/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96/"  itemprop="url">
         股票买卖V
       </a>
     </h2>
@@ -2529,16 +2541,21 @@ d[i][j] = min(&...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法] [动态规划] 股票买卖题目
+        [算法] [动态规划] 股票买卖
+题目
 
-给定一个长度为n的数组, 第i个数字表示股票第i天的价格.设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票:1.不能同时参与多笔交易2.股票冷冻期为1天.
+给定一个长度为n的数组,
+第i个数字表示股票第i天的价格.
+设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票:
+1.不能同时参与多笔交易 2.股票冷冻期为1天.
 
 思路
-要计算第i天的收益, 需要用到第i - 1天的收益, 满足子问题重叠.
+要计算第i天的收益, 需要用到第i - 1天的收益,
+满足子问题重叠.
 最优子结构和无后效性也满足.
 所以这道题可以用动态规划做.
 
-d[i][0]表示第i天时未持有股票且...
+d[i][0]表示第i天时未持...
       
     
   </div>
@@ -2551,7 +2568,7 @@ d[i][0]表示第i天时未持有股票且...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/16/%E2%95%A3%E2%95%94%E2%95%9E%E2%96%92%E2%94%AC%D0%84%E2%94%AC%D0%87V/' itemprop="url">
+          <a class='readmore' href='/2023/07/16/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2567,7 +2584,7 @@ d[i][0]表示第i天时未持有股票且...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/15/▒р╝н╛р└ы/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/15/编辑距离/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2585,7 +2602,7 @@ d[i][0]表示第i天时未持有股票且...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/15/%E2%96%92%D1%80%E2%95%9D%D0%BD%E2%95%9B%D1%80%E2%94%94%D1%8B/"  itemprop="url">
+      <a href="/2023/07/15/%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/"  itemprop="url">
         编辑距离
       </a>
     </h2>
@@ -2593,14 +2610,19 @@ d[i][0]表示第i天时未持有股票且...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法] [动态规划] 编辑距离题目
+        [算法] [动态规划] 编辑距离
+题目
 
-有字符串a和字符串b.我们要用最少的字符操作次数, 将字符串a转换为字符串b.字符操作有三种:1.删除一个字符;2.插入一个字符;3.将一个字符改为另一个字符.对字符串a和b, 计算出将字符串a变为字符串b所用的最少字符操作次数.
+有字符串a和字符串b.我们要用最少的字符操作次数,
+将字符串a转换为字符串b. 字符操作有三种:
+1.删除一个字符; 2.插入一个字符; 3.将一个字符改为另一个字符.
+对字符串a和b,
+计算出将字符串a变为字符串b所用的最少字符操作次数.
 
 思路
 用d(i, j)表示a第1~i个字符和b第1~j个字符的编辑距离.
 题目满足最优子结构.
-d(i, j)和d(i ...
+d(i, j...
       
     
   </div>
@@ -2613,7 +2635,7 @@ d(i, j)和d(i ...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/15/%E2%96%92%D1%80%E2%95%9D%D0%BD%E2%95%9B%D1%80%E2%94%94%D1%8B/' itemprop="url">
+          <a class='readmore' href='/2023/07/15/%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2629,7 +2651,7 @@ d(i, j)和d(i ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/13/╖╣┐и/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/13/饭卡/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2647,7 +2669,7 @@ d(i, j)和d(i ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/13/%E2%95%96%E2%95%A3%E2%94%90%D0%B8/"  itemprop="url">
+      <a href="/2023/07/13/%E9%A5%AD%E5%8D%A1/"  itemprop="url">
         饭卡
       </a>
     </h2>
@@ -2655,12 +2677,13 @@ d(i, j)和d(i ...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法] [动态规划] 饭卡常见背包代码
+        [算法] [动态规划] 饭卡
+常见背包代码
 
 01背包
-状态转移方程: d(j) &#x3D; max(d(j), d(j - w(i)) + c(i))
+状态转移方程: d(j) = max(d(j), d(j - w(i)) + c(i))
 代码:
-123456789101112131415161718192021222324#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int m,...
+123456789101112131415161718192021222324#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int m,n,w[...
       
     
   </div>
@@ -2673,7 +2696,7 @@ d(i, j)和d(i ...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/13/%E2%95%96%E2%95%A3%E2%94%90%D0%B8/' itemprop="url">
+          <a class='readmore' href='/2023/07/13/%E9%A5%AD%E5%8D%A1/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2689,7 +2712,7 @@ d(i, j)和d(i ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/12/┤л╓╜╠ї/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/12/传纸条/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2707,7 +2730,7 @@ d(i, j)和d(i ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/12/%E2%94%A4%D0%BB%E2%95%93%E2%95%9C%E2%95%A0%D1%97/"  itemprop="url">
+      <a href="/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/"  itemprop="url">
         传纸条
       </a>
     </h2>
@@ -2715,9 +2738,16 @@ d(i, j)和d(i ...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法] [动态规划] 传纸条题目
+        [算法] [动态规划] 传纸条
+题目
 
-小渊和小轩是好朋友也是同班同学, 他们在一起总有谈不完的话题.一次素质拓展活动中, 班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端, 因此, 他们就无法直接交谈了.幸运的是, 他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里, 小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角, 坐标(m,n).从小渊...
+小渊和小轩是好朋友也是同班同学,
+他们在一起总有谈不完的话题.一次素质拓展活动中,
+班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端,
+因此, 他们就无法直接交谈了.幸运的是,
+他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里,
+小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角,
+坐标(m,n).从小...
       
     
   </div>
@@ -2730,7 +2760,7 @@ d(i, j)和d(i ...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/12/%E2%94%A4%D0%BB%E2%95%93%E2%95%9C%E2%95%A0%D1%97/' itemprop="url">
+          <a class='readmore' href='/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2746,7 +2776,7 @@ d(i, j)和d(i ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/11/╝╙╙═╬╩╠т/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/11/加油问题/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2764,7 +2794,7 @@ d(i, j)和d(i ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/11/%E2%95%9D%E2%95%99%E2%95%99%E2%95%90%E2%95%AC%E2%95%A9%E2%95%A0%D1%82/"  itemprop="url">
+      <a href="/2023/07/11/%E5%8A%A0%E6%B2%B9%E9%97%AE%E9%A2%98/"  itemprop="url">
         加油问题
       </a>
     </h2>
@@ -2772,9 +2802,15 @@ d(i, j)和d(i ...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法思想] [贪心] 加油问题题目
+        [算法思想] [贪心] 加油问题
+题目
 
-你需要驾驶一辆卡车行驶L单位的距离.最开始时, 卡车上有P单位的汽油.卡车每开1单位距离需要消耗1单位的汽油.如果在途中车上的汽油耗尽, 卡车就无法继续前进, 因而无法到达终点.在途中一共有N个加油站.第i个加油站在距离起点Ai单位距离的地方, 最多可以给卡车加Bi单位的汽油, 假设卡车的燃料箱的容量是无限大的, 无论加多少油都没有问题, 那么请问卡车...
+你需要驾驶一辆卡车行驶L单位的距离.最开始时,
+卡车上有P单位的汽油.卡车每开1单位距离需要消耗1单位的汽油.
+如果在途中车上的汽油耗尽, 卡车就无法继续前进,
+因而无法到达终点.在途中一共有N个加油站.第i个加油站在距离起点Ai单位距离的地方,
+最多可以给卡车加Bi单位的汽油, 假设卡车的燃料箱的容量是无限大的,
+无论加多少油都没有问题, 那么请问...
       
     
   </div>
@@ -2787,7 +2823,7 @@ d(i, j)和d(i ...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/11/%E2%95%9D%E2%95%99%E2%95%99%E2%95%90%E2%95%AC%E2%95%A9%E2%95%A0%D1%82/' itemprop="url">
+          <a class='readmore' href='/2023/07/11/%E5%8A%A0%E6%B2%B9%E9%97%AE%E9%A2%98/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2803,7 +2839,7 @@ d(i, j)和d(i ...
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/09/─╠┼г╚╒╣т╘б/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/09/奶牛日光浴/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2821,7 +2857,7 @@ d(i, j)和d(i ...
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/09/%E2%94%80%E2%95%A0%E2%94%BC%D0%B3%E2%95%9A%E2%95%92%E2%95%A3%D1%82%E2%95%98%D0%B1/"  itemprop="url">
+      <a href="/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/"  itemprop="url">
         奶牛日光浴
       </a>
     </h2>
@@ -2829,14 +2865,18 @@ d(i, j)和d(i ...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法思想] [贪心] 奶牛日光浴题目
+        [算法思想] [贪心] 奶牛日光浴
+题目
 
-有C头奶牛进行日光浴, 第i头奶牛需要minSPF[i]到maxSPF[i]单位强度之间的阳光.每头奶牛在日光浴前必须涂防晒霜, 防晒霜有L种, 涂上第i种之后, 身体接收到的阳光强度就会稳定为SPF[i], 第i种防晒霜有cover[i]瓶, 求最多可以满足多少头奶牛进行日光浴.
+有C头奶牛进行日光浴,
+第i头奶牛需要minSPF[i]到maxSPF[i]单位强度之间的阳光.每头奶牛在日光浴前必须涂防晒霜,
+防晒霜有L种, 涂上第i种之后, 身体接收到的阳光强度就会稳定为SPF[i],
+第i种防晒霜有cover[i]瓶, 求最多可以满足多少头奶牛进行日光浴.
 
 思路
 先排序:
 对于奶牛, 按照最小阳光强度降序排序;
-对于防晒霜...
+对于防晒...
       
     
   </div>
@@ -2849,7 +2889,7 @@ d(i, j)和d(i ...
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/09/%E2%94%80%E2%95%A0%E2%94%BC%D0%B3%E2%95%9A%E2%95%92%E2%95%A3%D1%82%E2%95%98%D0%B1/' itemprop="url">
+          <a class='readmore' href='/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2891,13 +2931,17 @@ d(i, j)和d(i ...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法思想] [贪心] Crossing River贪心
+        [算法思想] [贪心] Crossing
+River
+贪心
 
-贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.
+贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择,
+而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.
 
 题目
 
-几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.
+几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定,
+求过河所需的最短时间.
 
 思路
 先分析一下样例.
@@ -2906,7 +2950,8 @@ d(i, j)和d(i ...
 
 对于这个样例, 我们可以进行如下的操作:
 
-(1) 1和2...
+
+1和2过河...
       
     
   </div>
@@ -3122,13 +3167,19 @@ d(i, j)和d(i ...
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike
+4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span
+id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+次</span> <span id="lc-uv">访客数为 <span
+id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+人</span></p>
 </div>
         
       
@@ -3141,7 +3192,7 @@ d(i, j)和d(i ...
     
       
         <div class='copyright'>
-        <p><a href="/">©2023 meowjiao</a></p>
+        <p><a href="/">By meowjiao</a></p>
 
         </div>
       

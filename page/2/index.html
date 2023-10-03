@@ -1740,7 +1740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1696321000527),
+    lastupdate: new Date(1696326516809),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2354,7 +2354,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/09/─╠┼г╚╒╣т╘б/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/07/09/奶牛日光浴/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2372,7 +2372,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/09/%E2%94%80%E2%95%A0%E2%94%BC%D0%B3%E2%95%9A%E2%95%92%E2%95%A3%D1%82%E2%95%98%D0%B1/"  itemprop="url">
+      <a href="/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/"  itemprop="url">
         奶牛日光浴
       </a>
     </h2>
@@ -2380,14 +2380,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法思想] [贪心] 奶牛日光浴题目
+        [算法思想] [贪心] 奶牛日光浴
+题目
 
-有C头奶牛进行日光浴, 第i头奶牛需要minSPF[i]到maxSPF[i]单位强度之间的阳光.每头奶牛在日光浴前必须涂防晒霜, 防晒霜有L种, 涂上第i种之后, 身体接收到的阳光强度就会稳定为SPF[i], 第i种防晒霜有cover[i]瓶, 求最多可以满足多少头奶牛进行日光浴.
+有C头奶牛进行日光浴,
+第i头奶牛需要minSPF[i]到maxSPF[i]单位强度之间的阳光.每头奶牛在日光浴前必须涂防晒霜,
+防晒霜有L种, 涂上第i种之后, 身体接收到的阳光强度就会稳定为SPF[i],
+第i种防晒霜有cover[i]瓶, 求最多可以满足多少头奶牛进行日光浴.
 
 思路
 先排序:
 对于奶牛, 按照最小阳光强度降序排序;
-对于防晒霜...
+对于防晒...
       
     
   </div>
@@ -2400,7 +2404,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2023/07/09/%E2%94%80%E2%95%A0%E2%94%BC%D0%B3%E2%95%9A%E2%95%92%E2%95%A3%D1%82%E2%95%98%D0%B1/' itemprop="url">
+          <a class='readmore' href='/2023/07/09/%E5%A5%B6%E7%89%9B%E6%97%A5%E5%85%89%E6%B5%B4/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2442,13 +2446,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        [算法思想] [贪心] Crossing River贪心
+        [算法思想] [贪心] Crossing
+River
+贪心
 
-贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.
+贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择,
+而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.
 
 题目
 
-几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.
+几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定,
+求过河所需的最短时间.
 
 思路
 先分析一下样例.
@@ -2457,7 +2465,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 对于这个样例, 我们可以进行如下的操作:
 
-(1) 1和2...
+
+1和2过河...
       
     
   </div>
@@ -2486,7 +2495,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/06/24/┐╔┤я╤╝J2╓к╩╢╫▄╜с/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/06/24/可达鸭J2知识总结/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2504,7 +2513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/24/%E2%94%90%E2%95%94%E2%94%A4%D1%8F%E2%95%A4%E2%95%9DJ2%E2%95%93%D0%BA%E2%95%A9%E2%95%A2%E2%95%AB%E2%96%84%E2%95%9C%D1%81/"  itemprop="url">
+      <a href="/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"  itemprop="url">
         可达鸭J2知识总结
       </a>
     </h2>
@@ -2514,12 +2523,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         思维导图
 
+
+6.png
+
+
 图的存储与遍历
-邻接矩阵实现方式: 通过数组存储边.若i和j有一条单向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 0;若i和j有一条双向边, 则ai j &#x3D;&#x3D; 1, aj i &#x3D;&#x3D; 1.
+
+邻接矩阵
+实现方式: 通过数组存储边.若i和j有一条单向边, 则ai j == 1,
+aj i == 0;若i和j有一条双向边, 则ai j == 1, aj
+i == 1.
 题目
-输入一个无向图的信息, 输出图的邻接矩阵和与顶点t直接相连的顶点的个数及邻接点.
+输入一个无向图的信息,
+输出图的邻接矩阵和与顶点t直接相连的顶点的个数及邻接点.
 代码
-123456789...
+12345678910111213141516171819202122232...
       
     
   </div>
@@ -2532,7 +2550,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2023/06/24/%E2%94%90%E2%95%94%E2%94%A4%D1%8F%E2%95%A4%E2%95%9DJ2%E2%95%93%D0%BA%E2%95%A9%E2%95%A2%E2%95%AB%E2%96%84%E2%95%9C%D1%81/' itemprop="url">
+          <a class='readmore' href='/2023/06/24/%E5%8F%AF%E8%BE%BE%E9%B8%ADJ2%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2548,7 +2566,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/05/19/╩ў╡─╓▒╛╢/">
+  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/05/19/树的直径/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="meowjiao">
   </span>
@@ -2566,7 +2584,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/05/19/%E2%95%A9%D1%9E%E2%95%A1%E2%94%80%E2%95%93%E2%96%92%E2%95%9B%E2%95%A2/"  itemprop="url">
+      <a href="/2023/05/19/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/"  itemprop="url">
         树的直径
       </a>
     </h2>
@@ -2580,13 +2598,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 思路
 代码
 
-[数据结构] [树] 树的直径概念1在一棵树中, 从所有可能的点对中找到两个相距最远的点, 这两个点之间的路径的长度就是这棵树的直径.
-
-题目描述题目
+[数据结构] [树] 树的直径
+概念
+1在一棵树中, 从所有可能的点对中找到两个相距最远的点, 这两个点之间的路径的长度就是这棵树的直径.
+题目描述
+题目
 123给定一棵树, 树中包含n个结点(编号1~n)和n-1条无向边, 每条边都有一个权值.现在请你找到树中的一条路径, 使得路径两端的点的距离最远.注意: 路径中可以只包含一个点.
-
 输入
-12第一行包含整数n...
+12第一行包含整数...
       
     
   </div>
@@ -2599,7 +2618,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2023/05/19/%E2%95%A9%D1%9E%E2%95%A1%E2%94%80%E2%95%93%E2%96%92%E2%95%9B%E2%95%A2/' itemprop="url">
+          <a class='readmore' href='/2023/05/19/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2642,12 +2661,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         [数据结构] [树] 恢复二叉搜索树
+
 题目描述
 题目
-给你一棵二叉搜索树的信息, 该树中的两个节点的值被错误地交换.请你找到这两个点并将其恢复成正确的结构.
+给你一棵二叉搜索树的信息,
+该树中的两个节点的值被错误地交换.请你找到这两个点并将其恢复成正确的结构.
 输入
 第一行输入一个整数n, 表示接下来要输入n个数据;
-第二行输入n个数据ai, 第i个数字表示第i个节点的数值为ai.(-2^31&lt;&#x3D;ai&lt;&#x3D;2^31-1), 如果输入的为0, 表示这个位置没有节点....
+第二行输入n个数据ai,
+第i个数字表示第i个节点的数值为ai.(-231&lt;=ai&lt;=231-1),
+如果输入的为0, 表示这个位置没有节点.
+节点个数不超过100...
       
     
   </div>
@@ -2661,68 +2685,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/04/28/%E2%95%97%E2%95%93%E2%95%95%E2%94%A4%E2%95%A2%E2%96%A0%E2%96%93%D1%86%E2%95%A6%E2%95%A4%E2%95%A6%D1%9E%E2%95%A9%D1%9E/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://catmeowjiao.github.io/2023/04/16/└и║┼╞е┼ф/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="meowjiao">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="meowjiao">
-    <meta itemprop="description" content="meowjiao-blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/04/16/%E2%94%94%D0%B8%E2%95%91%E2%94%BC%E2%95%9E%D0%B5%E2%94%BC%D1%84/"  itemprop="url">
-        括号匹配
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        [数据结构] [栈] 括号匹配
-题目描述
-题目
-假设表达式中允许包含圆括号和方括号两种括号, 其嵌套的顺序随意, 如()或[([][])]等为正确的匹配, [(])或(或(()))均为错误的匹配.
-本题的任务是检验一个给定的表达式中的括号是否匹配正确.
-输入一个只包含圆括号和方括号的字符串, 判断字符串中的括号是否匹配, 匹配就输出”OK”, 不匹配就输出”Wrong”.
-输入
-一行字符, ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-16T22:00:00+08:00">2023-04-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/04/16/%E2%94%94%D0%B8%E2%95%91%E2%94%BC%E2%95%9E%D0%B5%E2%94%BC%D1%84/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2940,13 +2902,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike
+4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span
+id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+次</span> <span id="lc-uv">访客数为 <span
+id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+人</span></p>
 </div>
         
       
@@ -2959,7 +2927,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="/">©2023 meowjiao</a></p>
+        <p><a href="/">By meowjiao</a></p>
 
         </div>
       

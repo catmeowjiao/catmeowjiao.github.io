@@ -39,7 +39,7 @@
 <meta property="og:title" content="最大正方形">
 <meta property="og:url" content="https://catmeowjiao.github.io/2023/07/18/%E2%95%AB%D1%8E%E2%94%A4%D1%94%E2%95%92%C2%A4%E2%95%96%E2%95%9C%E2%95%A8%E2%95%AC/index.html">
 <meta property="og:site_name" content="meowjiao">
-<meta property="og:description" content="[算法] [动态规划] 最大正方形题目  在一个由0和1组成的n * m的二维矩阵内, 找到只包含1的最大正方形的面积.  思路 这道题目主要难点在于如何建表. 我们可以用d[i][j]表示这个正方形. 那如何表示呢? 如果记录左上角和右下角, 需要四维, 而且很难想到d数组中存储什么. 我们可以记录右下角, 在d数组中存储正方形边长. 接下来是状态转移方程. d[i][j] &#x3D; min(&amp;#12">
+<meta property="og:description" content="[算法] [动态规划] 最大正方形 题目  在一个由0和1组成的n * m的二维矩阵内, 找到只包含1的最大正方形的面积.  思路 这道题目主要难点在于如何建表. 我们可以用d[i][j]表示这个正方形. 那如何表示呢? 如果记录左上角和右下角, 需要四维, 而且很难想到d数组中存储什么. 我们可以记录右下角, 在d数组中存储正方形边长. 接下来是状态转移方程. d[i][j] &#x3D; min(&amp;#1">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-07-18T02:04:35.000Z">
@@ -1742,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1696321000527),
+    lastupdate: new Date(1696326516809),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2378,7 +2378,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="/img/avatar.png" class="lazyload" data-srcset="/img/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <img itemprop="image" src="/files/avatar.png" class="lazyload" data-srcset="/files/avatar.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">meowjiao</p>
   </a>
 </div>
@@ -2417,25 +2417,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="算法-动态规划-最大正方形"><a href="#算法-动态规划-最大正方形" class="headerlink" title="[算法] [动态规划] 最大正方形"></a>[算法] [动态规划] 最大正方形</h1><p><strong>题目</strong></p>
+    <h1 id="算法-动态规划-最大正方形">[算法] [动态规划] 最大正方形</h1>
+<p><strong>题目</strong></p>
 <blockquote>
-<p>在一个由<code>0</code>和<code>1</code>组成的<code>n * m</code>的二维矩阵内, 找到只包含<code>1</code>的最大正方形的面积.</p>
+<p>在一个由<code>0</code>和<code>1</code>组成的<code>n * m</code>的二维矩阵内,
+找到只包含<code>1</code>的最大正方形的面积.</p>
 </blockquote>
 <p><strong>思路</strong></p>
 <p>这道题目主要难点在于如何建表.</p>
 <p>我们可以用<code>d[i][j]</code>表示这个正方形.</p>
 <p>那如何表示呢?</p>
-<p>如果记录左上角和右下角, 需要四维, 而且很难想到<code>d</code>数组中存储什么.</p>
+<p>如果记录左上角和右下角, 需要四维,
+而且很难想到<code>d</code>数组中存储什么.</p>
 <p>我们可以记录右下角, 在<code>d</code>数组中存储正方形边长.</p>
 <p>接下来是状态转移方程.</p>
 <p><code>d[i][j] = min(&#123;d[i - 1][j - 1],d[i - 1][j],d[i][j - 1]&#125;) + 1;</code></p>
 <p>这道题要求最大正方形, 但为什么用<code>min</code>呢?</p>
-<p><img src="/files/7.png" class="lazyload" data-srcset="/files/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="7.png"></p>
-<p>对于这个点, 如果它取了上方或左方的<code>1</code>, 那么左上角是<code>0</code>, 因此要取左上方的<code>0</code>.</p>
+<figure>
+<img src="/files/7.png" class="lazyload" data-srcset="/files/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="7.png" />
+<figcaption aria-hidden="true">7.png</figcaption>
+</figure>
+<p>对于这个点, 如果它取了上方或左方的<code>1</code>,
+那么左上角是<code>0</code>, 因此要取左上方的<code>0</code>.</p>
 <p><strong>代码</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,ans,a[<span class="number">1010</span>][<span class="number">1010</span>],d[<span class="number">1010</span>][<span class="number">1010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= m;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= m;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[i][j] == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                d[i][j] = <span class="built_in">min</span>(&#123;d[i - <span class="number">1</span>][j - <span class="number">1</span>],d[i - <span class="number">1</span>][j],d[i][j - <span class="number">1</span>]&#125;) + <span class="number">1</span>; <span class="comment">// 状态转移.</span></span><br><span class="line">            &#125;</span><br><span class="line">            ans = <span class="built_in">max</span>(ans,d[i][j] * d[i][j]); <span class="comment">// 虽然d数组记录的是边长, 但题目要求输出面积.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl; <span class="comment">// 输出最大面积.</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
+<hr />
 <p>©2023 meowjiao</p>
 
   </div>
@@ -2454,7 +2460,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <blockquote>
               
                 
-                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA
+4.0) 协议</p>
 
                 
               
@@ -2559,19 +2566,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2023/08/15/NoneNews-%E7%AC%AC1%E6%9C%9F/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>NoneNews第1期</p>
-          <p class='content'>NoneNews 第1期2023&#x2F;08&#x2F;15 星期二 第1期 售价0元
+          <p class='content'>NoneNews 第1期
+2023/08/15 星期二 第1期 售价0元
 主编: meowjiao
 今日寄语: NoneBot真的太NB了!
 
-今日重磅NoneNews起源竟是...</p>
+今日重磅
+NoneNews起源竟是一张整活图片?
+...</p>
         </a>
       
       
-        <a class='next' href='/2023/07/16/%E2%95%9B%E2%95%AA%E2%95%92%D1%94%E2%94%B4%D0%BC%E2%94%82%E2%95%A6/'>
+        <a class='next' href='/2023/07/16/%E7%9F%A9%E9%98%B5%E8%BF%9E%E4%B9%98/'>
           <p class='title'>矩阵连乘<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>[算法] [动态规划] 矩阵连乘题目
+          <p class='content'>[算法] [动态规划] 矩阵连乘
+题目
 
-矩阵a有n行m列, 矩阵b有x行y列, 如果m = x, 它们相乘将得到n行y列的矩阵, 一次矩阵乘法的运算次数为n * m * y.给出n个矩阵, 每次...</p>
+矩阵a有n行m列,
+矩阵b有x行y列,
+如果m = x,
+它们相乘将得到n行y列的矩阵,
+一次矩阵乘法的运算次数为n * m * y.给出n个矩阵,
+每...</p>
         </a>
       
     </div>
@@ -2724,13 +2740,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike
+4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span
+id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+次</span> <span id="lc-uv">访客数为 <span
+id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+人</span></p>
 </div>
         
       
@@ -2743,7 +2765,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="/">©2023 meowjiao</a></p>
+        <p><a href="/">By meowjiao</a></p>
 
         </div>
       
