@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"catmeowjiao.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="[算法] [动态规划] 股票买卖 题目  给定一个长度为n的数组, 第i个数字表示股票第i天的价格. 设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票: 1.不能同时参与多笔交易 2.股票冷冻期为1天.  思路 要计算第i天的收益, 需要用到第i - 1天的收益, 满足子问题重叠. 最优子结构和无后效性也满足. 所以这道题可以用动态规划做.  d[i][0]表示第i天时未持有股票">
+  <meta name="description" content="[算法] [动态规划] 股票买卖题目  给定一个长度为n的数组, 第i个数字表示股票第i天的价格.设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票:1.不能同时参与多笔交易2.股票冷冻期为1天.  思路 要计算第i天的收益, 需要用到第i - 1天的收益, 满足子问题重叠. 最优子结构和无后效性也满足. 所以这道题可以用动态规划做.  d[i][0]表示第i天时未持有股票且不在冷">
 <meta property="og:type" content="article">
 <meta property="og:title" content="股票买卖V">
 <meta property="og:url" content="https://catmeowjiao.github.io/2023/07/16/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96/index.html">
 <meta property="og:site_name" content="meowjiao">
-<meta property="og:description" content="[算法] [动态规划] 股票买卖 题目  给定一个长度为n的数组, 第i个数字表示股票第i天的价格. 设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票: 1.不能同时参与多笔交易 2.股票冷冻期为1天.  思路 要计算第i天的收益, 需要用到第i - 1天的收益, 满足子问题重叠. 最优子结构和无后效性也满足. 所以这道题可以用动态规划做.  d[i][0]表示第i天时未持有股票">
+<meta property="og:description" content="[算法] [动态规划] 股票买卖题目  给定一个长度为n的数组, 第i个数字表示股票第i天的价格.设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票:1.不能同时参与多笔交易2.股票冷冻期为1天.  思路 要计算第i天的收益, 需要用到第i - 1天的收益, 满足子问题重叠. 最优子结构和无后效性也满足. 所以这道题可以用动态规划做.  d[i][0]表示第i天时未持有股票且不在冷">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-07-16T03:21:13.000Z">
 <meta property="article:modified_time" content="2023-10-03T08:29:00.614Z">
@@ -195,36 +195,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="算法-动态规划-股票买卖">[算法] [动态规划] 股票买卖</h1>
-<p><strong>题目</strong></p>
+        <h1 id="算法-动态规划-股票买卖"><a href="#算法-动态规划-股票买卖" class="headerlink" title="[算法] [动态规划] 股票买卖"></a>[算法] [动态规划] 股票买卖</h1><p><strong>题目</strong></p>
 <blockquote>
-<p>给定一个长度为<code>n</code>的数组,
-第<code>i</code>个数字表示股票第<code>i</code>天的价格.
-设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票:
-1.不能同时参与多笔交易 2.股票冷冻期为<code>1</code>天.</p>
+<p>给定一个长度为<code>n</code>的数组, 第<code>i</code>个数字表示股票第<code>i</code>天的价格.<br>设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票:<br>1.不能同时参与多笔交易<br>2.股票冷冻期为<code>1</code>天.</p>
 </blockquote>
 <p><strong>思路</strong></p>
-<p>要计算第<code>i</code>天的收益, 需要用到第<code>i - 1</code>天的收益,
-满足子问题重叠.</p>
+<p>要计算第<code>i</code>天的收益, 需要用到第<code>i - 1</code>天的收益, 满足子问题重叠.</p>
 <p>最优子结构和无后效性也满足.</p>
 <p>所以这道题可以用动态规划做.</p>
 <blockquote>
-<p><code>d[i][0]</code>表示第<code>i</code>天时未持有股票且不在冷冻期.
-<code>d[i][1]</code>表示第<code>i</code>天时持有股票.
-<code>d[i][2]</code>表示第<code>i</code>天时未持有股票且在冷冻期.</p>
+<p><code>d[i][0]</code>表示第<code>i</code>天时未持有股票且不在冷冻期.<br><code>d[i][1]</code>表示第<code>i</code>天时持有股票.<br><code>d[i][2]</code>表示第<code>i</code>天时未持有股票且在冷冻期.</p>
 </blockquote>
-<p>如果未持有股票且不在冷冻期, 那么前一天有两种可能性,
-<code>d[i - 1][0]</code>和<code>d[i - 1][2]</code>.</p>
-<p>如果持有股票, 那么前一天有两种可能性,
-<code>d[i - 1][1]</code>和<code>d[i - 1][0]</code>,
-如果是<code>d[i - 1][0]</code>, 则要减去<code>a[i]</code>.</p>
-<p>如果未持有股票且不在冷冻期, 那么前一天为<code>d[i - 1][1]</code>,
-需加上<code>a[i]</code>.</p>
+<p>如果未持有股票且不在冷冻期, 那么前一天有两种可能性, <code>d[i - 1][0]</code>和<code>d[i - 1][2]</code>.</p>
+<p>如果持有股票, 那么前一天有两种可能性, <code>d[i - 1][1]</code>和<code>d[i - 1][0]</code>, 如果是<code>d[i - 1][0]</code>, 则要减去<code>a[i]</code>.</p>
+<p>如果未持有股票且不在冷冻期, 那么前一天为<code>d[i - 1][1]</code>, 需加上<code>a[i]</code>.</p>
 <p>状态转移方程:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d[i][0] = max(d[i - 1][0],d[i - 1][2]);</span><br><span class="line">d[i][1] = max(d[i - 1][1],d[i - 1][0] - a[i]);</span><br><span class="line">d[i][2] = d[i - 1][1] + a[i];</span><br></pre></td></tr></table></figure>
+
 <p><strong>代码</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,a[<span class="number">100010</span>],d[<span class="number">100010</span>][<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(d,<span class="number">-0x3f</span>,<span class="built_in">sizeof</span>(d)); <span class="comment">// 为了避免初始状态为持有股票或冷冻期, 需要将d数组初始化为-0x3f3f3f3f.</span></span><br><span class="line">    d[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">// 初始化.</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 状态转移.</span></span><br><span class="line">        d[i][<span class="number">0</span>] = <span class="built_in">max</span>(d[i - <span class="number">1</span>][<span class="number">0</span>],d[i - <span class="number">1</span>][<span class="number">2</span>]);</span><br><span class="line">        d[i][<span class="number">1</span>] = <span class="built_in">max</span>(d[i - <span class="number">1</span>][<span class="number">1</span>],d[i - <span class="number">1</span>][<span class="number">0</span>] - a[i]);</span><br><span class="line">        d[i][<span class="number">2</span>] = d[i - <span class="number">1</span>][<span class="number">1</span>] + a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">max</span>(d[n][<span class="number">0</span>],d[n][<span class="number">2</span>]) &lt;&lt; endl; <span class="comment">// 最后一天未持有股票是最优选择.</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
+
+<hr>
 <p>By meowjiao</p>
 
     </div>

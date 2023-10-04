@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"catmeowjiao.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="[算法思想] [贪心] Crossing River 贪心  贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.  题目  几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.  思路 先分析一下样例.  41 2 5 10  对于这个样例, 我们可以进行如下的操作:   1和2过河, 1">
+  <meta name="description" content="[算法思想] [贪心] Crossing River贪心  贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.  题目  几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.  思路 先分析一下样例.  41 2 5 10  对于这个样例, 我们可以进行如下的操作:  (1) 1和2过河,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Crossing River">
 <meta property="og:url" content="https://catmeowjiao.github.io/2023/07/09/Crossing-River/index.html">
 <meta property="og:site_name" content="meowjiao">
-<meta property="og:description" content="[算法思想] [贪心] Crossing River 贪心  贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.  题目  几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.  思路 先分析一下样例.  41 2 5 10  对于这个样例, 我们可以进行如下的操作:   1和2过河, 1">
+<meta property="og:description" content="[算法思想] [贪心] Crossing River贪心  贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.  题目  几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.  思路 先分析一下样例.  41 2 5 10  对于这个样例, 我们可以进行如下的操作:  (1) 1和2过河,">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-07-09T01:56:15.000Z">
 <meta property="article:modified_time" content="2023-07-09T03:13:30.000Z">
@@ -189,17 +189,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="算法思想-贪心-crossing-river">[算法思想] [贪心] Crossing
-River</h1>
-<p><strong>贪心</strong></p>
+        <h1 id="算法思想-贪心-Crossing-River"><a href="#算法思想-贪心-Crossing-River" class="headerlink" title="[算法思想] [贪心] Crossing River"></a>[算法思想] [贪心] Crossing River</h1><p><strong>贪心</strong></p>
 <blockquote>
-<p>贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择,
-而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.</p>
+<p>贪心算法是指在对问题求解时, 总是做出在当前看来是最好的选择, 而不从整体最优上考虑, 所以贪心算法得到的是局部最优解.</p>
 </blockquote>
 <p><strong>题目</strong></p>
 <blockquote>
-<p>几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定,
-求过河所需的最短时间.</p>
+<p>几个人过河, 每次两人过河, 一人回去, 每次过河的时间由慢者决定, 求过河所需的最短时间.</p>
 </blockquote>
 <p><strong>思路</strong></p>
 <p>先分析一下样例.</p>
@@ -208,49 +204,44 @@ River</h1>
 </blockquote>
 <p>对于这个样例, 我们可以进行如下的操作:</p>
 <blockquote>
-<ol type="1">
-<li>1和2过河, 1回来.<br>(2) 5和10过河, 2回来.<br>(3) 1和2过河.</li>
-</ol>
+<p>(1) 1和2过河, 1回来.<br>(2) 5和10过河, 2回来.<br>(3) 1和2过河.</p>
 </blockquote>
-<p>时间: 2 + 1 + 10 + 2 + 1 = 17.</p>
+<p>时间: 2 + 1 + 10 + 2 + 1 &#x3D; 17.</p>
 <p>这种方案时间最短.</p>
-<p>将记录每个人过河时间的数组a进行排序,
-我们就有了一个表格和一个计算流程:</p>
+<p>将记录每个人过河时间的数组a进行排序, 我们就有了一个表格和一个计算流程:</p>
+<blockquote>
 <table>
 <thead>
-<tr class="header">
-<th>&gt;</th>
+<tr>
 <th>人数</th>
+<th>最短时间</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td>n = 1</td>
+<tbody><tr>
+<td>n &#x3D; 1</td>
 <td>a[1]</td>
 </tr>
-<tr class="even">
-<td>n = 2</td>
+<tr>
+<td>n &#x3D; 2</td>
 <td>a[2]</td>
 </tr>
-<tr class="odd">
-<td>n = 3</td>
+<tr>
+<td>n &#x3D; 3</td>
 <td>a[1] + a[2] + a[3]</td>
 </tr>
-<tr class="even">
-<td>n &gt;= 4</td>
+<tr>
+<td>n &gt;&#x3D; 4</td>
 <td>min(a[1] + a[2] * 2 + a[4], a[1] * 2 + a[3] + a[4])</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
+</blockquote>
 <blockquote>
-<ol type="1">
-<li>按照表格计算.<br>(2) n -= 2.<br>(3) 若n &gt;= 1, 执行(1),
-否则计算完成.</li>
-</ol>
+<p>(1) 按照表格计算.<br>(2) n -&#x3D; 2.<br>(3) 若n &gt;&#x3D; 1, 执行(1), 否则计算完成.</p>
 </blockquote>
 <p><strong>代码</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> t,n,a[<span class="number">1010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">solve</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> a[<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> a[<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> a[<span class="number">1</span>] + a[<span class="number">2</span>] + a[<span class="number">3</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n &gt;= <span class="number">4</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(a[<span class="number">1</span>] + a[<span class="number">2</span>] * <span class="number">2</span> + a[n],a[<span class="number">1</span>] * <span class="number">2</span> + a[n - <span class="number">1</span>] + a[n]) + <span class="built_in">solve</span>(n - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">sort</span>(a + <span class="number">1</span>,a + n + <span class="number">1</span>);</span><br><span class="line">        cout &lt;&lt; <span class="built_in">solve</span>(n) &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
+
+<hr>
 <p>©2023 meowjiao</p>
 
     </div>
@@ -332,8 +323,7 @@ River</h1>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3-%E8%B4%AA%E5%BF%83-crossing-river"><span class="nav-number">1.</span> <span class="nav-text">[算法思想] [贪心] Crossing
-River</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3-%E8%B4%AA%E5%BF%83-Crossing-River"><span class="nav-number">1.</span> <span class="nav-text">[算法思想] [贪心] Crossing River</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
