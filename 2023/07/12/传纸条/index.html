@@ -1,32 +1,214 @@
-extends includes/layout.pug
-
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
-
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
-        
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>传纸条 | meowjiao</title><meta name="author" content="meowjiao"><meta name="copyright" content="meowjiao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[算法] [动态规划] 传纸条 题目  小渊和小轩是好朋友也是同班同学, 他们在一起总有谈不完的话题.一次素质拓展活动中, 班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端, 因此, 他们就无法直接交谈了.幸运的是, 他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里, 小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角, 坐标(m,n).从小渊传到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="传纸条">
+<meta property="og:url" content="https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/index.html">
+<meta property="og:site_name" content="meowjiao">
+<meta property="og:description" content="[算法] [动态规划] 传纸条 题目  小渊和小轩是好朋友也是同班同学, 他们在一起总有谈不完的话题.一次素质拓展活动中, 班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端, 因此, 他们就无法直接交谈了.幸运的是, 他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里, 小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角, 坐标(m,n).从小渊传到">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-07-12T03:54:09.000Z">
+<meta property="article:modified_time" content="2023-10-03T09:27:13.753Z">
+<meta property="article:author" content="meowjiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '传纸条',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-03 17:27:13'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
       
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="meowjiao"><span class="site-name">meowjiao</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">传纸条</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-07-12T03:54:09.000Z" title="Created 2023-07-12 11:54:09">2023-07-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-10-03T09:27:13.753Z" title="Updated 2023-10-03 17:27:13">2023-10-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="传纸条"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="算法-动态规划-传纸条">[算法] [动态规划] 传纸条</h1>
+<p><strong>题目</strong></p>
+<blockquote>
+<p>小渊和小轩是好朋友也是同班同学,
+他们在一起总有谈不完的话题.一次素质拓展活动中,
+班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端,
+因此, 他们就无法直接交谈了.幸运的是,
+他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里,
+小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角,
+坐标(m,n).从小渊传到小轩的纸条只可以向下或者向右传递,
+从小轩传给小渊的纸条只可以向上或者向左传递.在活动进行中,
+小渊希望给小轩传递一张纸条,
+同时希望小轩给他回复.班里每个同学都可以帮他们传递, 但只会帮他们一次,
+也就是说如果此人在小渊递给小轩纸条的时候帮忙,
+那么在小轩递给小渊的时候就不会再帮忙.反之亦然.还有一件事情需要注意,
+全班每个同学愿意帮忙的好感度有高有低(注意: 小渊和小轩的好心程度没有定义,
+输入时用0表示), 可以用一个0-100的自然数来表示,
+数越大表示越好心.小渊和小轩希望尽可能找好心程度高的同学来帮忙传纸条,
+即找到来回两条传递路径, 使得这两条路径上同学的好心程度之和最大.现在,
+请你帮助小渊和小轩找到这样的两条路径.</p>
+</blockquote>
+<p><strong>思路</strong></p>
+<p>这道题的难点在于要找两条路径.</p>
+<p>如果我们进行两次DP, 路径可能重叠.</p>
+<p>所以我们换个思路, 让两张纸条同时传递,
+并且让两张纸条都变成从小渊传递到小轩, 转变对答案没有影响.</p>
+<ul>
+<li><p>四维DP</p>
+<p>使用一个四维数组d, d(i, j, k, l)表示纸条1在(i, j), 纸条2在(k, l).</p>
+<p>状态转移方程: d(i, j, k, l) = max(d(i - 1, j, k - 1, l), d(i - 1, j,
+k, l - 1), d(i, j - 1, k - 1, l), d(i, j - 1, k, l - 1)) + a(i, j) +
+a(k, l)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法时间复杂度较高, 可能超时.</p></li>
+<li><p>三维DP</p>
+<p>我们发现i + j == k + l, 所以增加一维s来保存i + j, 减掉保存j和l的两维,
+用s - i代替j, s - k代替l.</p>
+<p>状态转移方程: max(d(s - 1, i, k), d(s - 1, i - 1, k), d(s - 1, i, k -
+1), d(s - 1,i - 1,k - 1)) + a(i, s - i) + a(k, s - k)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法会使时间复杂度变小, 但代价是空间会变大.</p></li>
+<li><p>二维DP</p>
+<p>我们发现三维DP的状态转移方程只和d(s - 1)有关, 所以可以利用滚动数组,
+去掉s这一维.</p>
+<p>不过在枚举的时候还是要枚举s, 并且i和k要倒序枚举,
+防止某个状态的转移元素在状态转移前被修改.</p>
+<p>状态转移方程: max(d(i, k), d(i - 1, k), d(i, k - 1), d(i - 1,k - 1))
++ a(i, s - i) + a(k, s - k)</p>
+<p>无需判重, 保证k &gt; i即可.</p>
+<p>这种方法会使空间变小.</p></li>
+</ul>
+<p><strong>代码</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> m,n,a[<span class="number">60</span>][<span class="number">60</span>],d[<span class="number">60</span>][<span class="number">60</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> s = <span class="number">3</span>;s &lt; m + n;s++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 终点不用DP.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = m - <span class="number">1</span>;i &gt;= <span class="number">1</span>;i--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = m;j &gt; i;j--)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (s - i &gt;= <span class="number">1</span> &amp;&amp; s - j &gt;= <span class="number">1</span> &amp;&amp; s - i &lt;= n &amp;&amp; s - j &lt;= n)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 若没有越界.</span></span><br><span class="line">                    d[i][j] = <span class="built_in">max</span>(&#123;d[i][j],d[i - <span class="number">1</span>][j - <span class="number">1</span>],d[i - <span class="number">1</span>][j],d[i][j - <span class="number">1</span>]&#125;) + a[i][s - i] + a[j][s - j]; <span class="comment">// 状态转移.</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; d[m - <span class="number">1</span>][m] &lt;&lt; endl; <span class="comment">// 终点没有DP过, 所以输出d[m - 1][m];</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<p>By meowjiao</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://catmeowjiao.github.io">meowjiao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/">https://catmeowjiao.github.io/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/13/%E9%A5%AD%E5%8D%A1/" title="饭卡"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">饭卡</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/11/%E5%8A%A0%E6%B2%B9%E9%97%AE%E9%A2%98/" title="加油问题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">加油问题</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">meowjiao</div><div class="author-info__description">meowjiao-blog</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E4%BC%A0%E7%BA%B8%E6%9D%A1"><span class="toc-number">1.</span> <span class="toc-text">[算法] [动态规划] 传纸条</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC4%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第4天补题报告">可达鸭2023国庆CSP-J复赛集训第4天补题报告</a><time datetime="2023-10-03T15:08:18.000Z" title="Created 2023-10-03 23:08:18">2023-10-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC3%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第3天补题报告">可达鸭2023国庆CSP-J复赛集训第3天补题报告</a><time datetime="2023-10-03T07:53:47.000Z" title="Created 2023-10-03 15:53:47">2023-10-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC2%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第2天补题报告">可达鸭2023国庆CSP-J复赛集训第2天补题报告</a><time datetime="2023-10-03T07:51:54.000Z" title="Created 2023-10-03 15:51:54">2023-10-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/15/NoneNews-%E7%AC%AC1%E6%9C%9F/" title="NoneNews第1期">NoneNews第1期</a><time datetime="2023-08-15T06:16:13.000Z" title="Created 2023-08-15 14:16:13">2023-08-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/18/%E2%95%AB%D1%8E%E2%94%A4%D1%94%E2%95%92%C2%A4%E2%95%96%E2%95%9C%E2%95%A8%E2%95%AC/" title="最大正方形">最大正方形</a><time datetime="2023-07-18T02:04:35.000Z" title="Created 2023-07-18 10:04:35">2023-07-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By meowjiao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

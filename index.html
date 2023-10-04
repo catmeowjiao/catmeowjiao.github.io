@@ -1,7 +1,391 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>meowjiao - meowjiao-blog</title><meta name="author" content="meowjiao"><meta name="copyright" content="meowjiao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="meowjiao-blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="meowjiao">
+<meta property="og:url" content="https://catmeowjiao.github.io/index.html">
+<meta property="og:site_name" content="meowjiao">
+<meta property="og:description" content="meowjiao-blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="meowjiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://catmeowjiao.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'meowjiao',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-10-04 09:58:50'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-block content
-  include ./includes/mixins/post-ui.pug
-  #recent-posts.recent-posts
-    +postUI
-    include includes/pagination.pug
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="meowjiao"><span class="site-name">meowjiao</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">meowjiao</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC4%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第4天补题报告">可达鸭2023国庆CSP-J复赛集训第4天补题报告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-03T15:08:18.000Z" title="Created 2023-10-03 23:08:18">2023-10-03</time></span></div><div class="content">可达鸭2023国庆CSP-J复赛集训第4天补题报告
+
+1 复读机
+
+赛中分数
+
+100分
+
+赛中概况
+
+花1小时写了个正解, 然后老师说有一种奇特的写法,
+我当时猜了个regex, 还真的猜对了...
+
+题目意思
+
+遍历给定的字符串s, 遇到字母就放进字符串ans,
+遇到数字就让x *= 10, 然后x += [这个数字],
+在下一次遇到字母时就ans = ans * x(这个操作并不是C++包含的,
+Python可以使用这个操作,
+这里的意思是把ans复读x遍,
+然后把复读后的结果赋值给ans).
+
+题目思路
+
+模拟.
+
+AC代码
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210310410510610710810911011111211 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC3%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第3天补题报告">可达鸭2023国庆CSP-J复赛集训第3天补题报告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-03T07:53:47.000Z" title="Created 2023-10-03 15:53:47">2023-10-03</time></span></div><div class="content">可达鸭2023国庆CSP-J复赛集训第3天补题报告
+1 数字对应
+### 赛中分数
+
+    &gt;`100`分
+
+### 赛中概况
+
+    &gt;花二十分钟写了个暴力, 觉得会`TLE`, 然后想了`1`小时, 加了一堆优化, 但还是没想出来&quot;正解&quot;, 考完以后发现我写的就是正解...
+
+### 题目意思
+
+    &gt;对于数组`a`构造一个数组`b`, `a`里面的每个相同的数都对应`b`里面的一个数, `b`里面的数不能在`a`里面, 求字典序最小的`b`.&lt;br&gt;比如`a`为`3 3 4 2 4 7`, `3`对应`1`, `4`对应`5`, `2`对应`6`, `7`对应`8`, 所以`b`为`1 1 5 6 5 8`.
+
+### 题目思路
+
+    &gt;用两个map, 一个记录数字是否用过, 一个记录`a[i]`对应的`b[i]`, 暴力即可.
+
+### AC代码
+    1234567891011121314151617181920212223242526272829303132333435363738394041424344 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC2%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第2天补题报告">可达鸭2023国庆CSP-J复赛集训第2天补题报告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-03T07:51:54.000Z" title="Created 2023-10-03 15:51:54">2023-10-03</time></span></div><div class="content">可达鸭2023国庆CSP-J复赛集训第2天补题报告
+
+1 人员借调
+
+赛中分数
+
+100分
+
+赛中概况
+
+花了四十分钟写这道题, 然后花半小时调完了Bug,
+去写第二题了, 后来有个同学问了一个问题, 我又发现一个Bug,
+然后改了二十分钟, 心态炸了, 第二题就爆0了.
+
+题目意思
+
+小可现在在A地, 她在B地有n个工作,
+每次往返需要400分钟,
+如果在B地呆的时间(不包括往返时间)超过240分钟,
+回A地后需要等10080分钟才能再次前往B地(这个过程下面叫做"坐牢"),
+求最少需要多少时间.
+
+题目思路
+
+有两种最优的可能性
+
+尽量不坐牢,
+如果不得不坐牢则把后面的工作一起做了再去坐牢.
+一起干完回去坐牢
+
+两种都算出来求最小值即可
+
+AC代码 12#include&lt;iostream&gt;using namespace std;int main()&#123;int n;cin&gt;&gt;n;int cur=0,ans1=0,ans2=400;bool flag=false;for(int i=1;i&lt;=n;i++)&#123;int a;cin&gt;&gt ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/15/NoneNews-%E7%AC%AC1%E6%9C%9F/" title="NoneNews第1期">NoneNews第1期</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-15T06:16:13.000Z" title="Created 2023-08-15 14:16:13">2023-08-15</time></span></div><div class="content">NoneNews 第1期
+2023/08/15 星期二 第1期 售价0元
+主编: meowjiao
+今日寄语: NoneBot真的太NB了!
+
+今日重磅
+NoneNews起源竟是一张整活图片?
+昨日, 在"NoneBot闲聊吹水"群内,
+一位群友发送了一张整活图片——NoneNews中国特供版
+该图片被转发到"NoneBot非官方交流群"内, 网友们顿时议论纷纷.
+这也是本报的起源, 本报致力于将快乐带给大家.
+
+
+-3da5f9bdd77591ce.png
+
+
+昨日, 一名网友在"NoneBot非官方交流群"内求助: "我电脑是台式机,
+没法带出来旅游, 现在用不了电脑, 烦得要死, 谁给我一台笔记本?",
+热心网友们看到后立刻回复"我有个没屏幕的旧电脑, Intel M3-7Y30 DDR3
+2333MHz 4G, 你要吗?", "我有一个装有Arch Linux, Xfce4, 开Xfce4
+Terminal都困难的笔记本电脑, 你要吗?"等消息
+
+
+-56e5f466be3dc9d4.png
+
+
+
+-1c6eeafa08901a04.png
+
+
+
+6f812cd44cf02da ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/18/%E2%95%AB%D1%8E%E2%94%A4%D1%94%E2%95%92%C2%A4%E2%95%96%E2%95%9C%E2%95%A8%E2%95%AC/" title="最大正方形">最大正方形</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-07-18T02:04:35.000Z" title="Created 2023-07-18 10:04:35">2023-07-18</time></span></div><div class="content">[算法] [动态规划] 最大正方形
+题目
+
+在一个由0和1组成的n * m的二维矩阵内,
+找到只包含1的最大正方形的面积.
+
+思路
+这道题目主要难点在于如何建表.
+我们可以用d[i][j]表示这个正方形.
+那如何表示呢?
+如果记录左上角和右下角, 需要四维,
+而且很难想到d数组中存储什么.
+我们可以记录右下角, 在d数组中存储正方形边长.
+接下来是状态转移方程.
+d[i][j] = min(&#123;d[i - 1][j - 1],d[i - 1][j],d[i][j - 1]&#125;) + 1;
+这道题要求最大正方形, 但为什么用min呢?
+
+
+7.png
+
+对于这个点, 如果它取了上方或左方的1,
+那么左上角是0, 因此要取左上方的0.
+代码
+123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int n,m,ans,a[1010][1010],d[1010][1010];int mai ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/16/%E7%9F%A9%E9%98%B5%E8%BF%9E%E4%B9%98/" title="矩阵连乘">矩阵连乘</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-07-16T12:55:44.000Z" title="Created 2023-07-16 20:55:44">2023-07-16</time></span></div><div class="content">[算法] [动态规划] 矩阵连乘
+题目
+
+矩阵a有n行m列,
+矩阵b有x行y列,
+如果m = x,
+它们相乘将得到n行y列的矩阵,
+一次矩阵乘法的运算次数为n * m * y.给出n个矩阵,
+每次可将相邻的两个相乘,
+求出如何使用最少的次数将n个矩阵合并成一个矩阵,
+输出最少次数.输入数据保证相邻的矩阵m = x.
+
+思路
+求n个矩阵合成一个矩阵的最少次数,
+得先知道n - 1个矩阵合成一个矩阵的最少次数,
+满足子问题重叠.
+所以这道题可以用动态规划求解.
+枚举左端点i和右端点j,
+在i ~ j中寻找一个k,
+用k作为分割点, 让左右两边相乘.
+但是如果这么枚举, 可能j - i = 1的状态还没找完,
+先找到了j - i = 2的状态.
+因此,
+我们将枚举i和j改为枚举长度len和i.
+这样, 我们可以推算出j.
+状态转移方程:
+d[i][j] = min(d[i][j],d[i][k] + d[k + 1][j] + a[i] * b[k] * b[j]);
+注: a数组用于保存矩阵行数, b数组用于保存矩阵列数.
+代码
+123456789101112131415161718192 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/16/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96/" title="股票买卖V">股票买卖V</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-07-16T03:21:13.000Z" title="Created 2023-07-16 11:21:13">2023-07-16</time></span></div><div class="content">[算法] [动态规划] 股票买卖
+题目
+
+给定一个长度为n的数组,
+第i个数字表示股票第i天的价格.
+设计一个算法计算出最大利润。在满足以下条件下, 你可以多次买卖股票:
+1.不能同时参与多笔交易 2.股票冷冻期为1天.
+
+思路
+要计算第i天的收益, 需要用到第i - 1天的收益,
+满足子问题重叠.
+最优子结构和无后效性也满足.
+所以这道题可以用动态规划做.
+
+d[i][0]表示第i天时未持有股票且不在冷冻期.
+d[i][1]表示第i天时持有股票.
+d[i][2]表示第i天时未持有股票且在冷冻期.
+
+如果未持有股票且不在冷冻期, 那么前一天有两种可能性,
+d[i - 1][0]和d[i - 1][2].
+如果持有股票, 那么前一天有两种可能性,
+d[i - 1][1]和d[i - 1][0],
+如果是d[i - 1][0], 则要减去a[i].
+如果未持有股票且不在冷冻期, 那么前一天为d[i - 1][1],
+需加上a[i].
+状态转移方程:
+123d[i][0] = max(d[i - 1][0],d[i - 1][2]);d[i][1] = max(d[i - 1][1],d[i ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/15/%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/" title="编辑距离">编辑距离</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-07-15T02:11:20.000Z" title="Created 2023-07-15 10:11:20">2023-07-15</time></span></div><div class="content">[算法] [动态规划] 编辑距离
+题目
+
+有字符串a和字符串b.我们要用最少的字符操作次数,
+将字符串a转换为字符串b. 字符操作有三种:
+1.删除一个字符; 2.插入一个字符; 3.将一个字符改为另一个字符.
+对字符串a和b,
+计算出将字符串a变为字符串b所用的最少字符操作次数.
+
+思路
+用d(i, j)表示a第1~i个字符和b第1~j个字符的编辑距离.
+题目满足最优子结构.
+d(i, j)和d(i - 1, j),
+d(i, j - 1), d(i - 1, j - 1)有关,
+满足了子问题重叠.
+而且已经求出的最优解, 不会被后面的决策影响, 满足无后效性.
+所以这道题可以用动态规划求解.
+接下来要写状态转移方程.
+如果a(i) == b(j),
+d(i, j) = d(i - 1, j - 1).
+否则d(i, j) = max(d(i - 1, j), d(i, j - 1), d(i - 1, j - 1)) + 1.
+还有一些细节, 在代码注释中.
+代码
+12345678910111213141516171819202122232425262728293031323334 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/13/%E9%A5%AD%E5%8D%A1/" title="饭卡">饭卡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-07-13T13:47:01.000Z" title="Created 2023-07-13 21:47:01">2023-07-13</time></span></div><div class="content">[算法] [动态规划] 饭卡
+常见背包代码
+
+01背包
+状态转移方程: d(j) = max(d(j), d(j - w(i)) + c(i))
+代码:
+123456789101112131415161718192021222324#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int m,n,w[40],c[40],d[210];int main()&#123;    cin &gt;&gt; m &gt;&gt; n;    for (int i = 1;i &lt;= n;i++)    &#123;        cin &gt;&gt; w[i] &gt;&gt; c[i];    &#125;    for (int i = 1;i &lt;= n;i++)    &#123;        for (int j = m;j &gt;= w[i];j--)        &#123;            // j要逆向遍历.            d[j] = max(d[j], ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/12/%E4%BC%A0%E7%BA%B8%E6%9D%A1/" title="传纸条">传纸条</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-07-12T03:54:09.000Z" title="Created 2023-07-12 11:54:09">2023-07-12</time></span></div><div class="content">[算法] [动态规划] 传纸条
+题目
+
+小渊和小轩是好朋友也是同班同学,
+他们在一起总有谈不完的话题.一次素质拓展活动中,
+班上同学安排做成一个m行n列的矩阵, 而小渊和小轩被安排在矩阵对角线的两端,
+因此, 他们就无法直接交谈了.幸运的是,
+他们可以通过传纸条来进行交流.纸条要经由许多同学传到对方手里,
+小渊坐在矩阵的左上角, 坐标(1,1), 小轩坐在矩阵的右下角,
+坐标(m,n).从小渊传到小轩的纸条只可以向下或者向右传递,
+从小轩传给小渊的纸条只可以向上或者向左传递.在活动进行中,
+小渊希望给小轩传递一张纸条,
+同时希望小轩给他回复.班里每个同学都可以帮他们传递, 但只会帮他们一次,
+也就是说如果此人在小渊递给小轩纸条的时候帮忙,
+那么在小轩递给小渊的时候就不会再帮忙.反之亦然.还有一件事情需要注意,
+全班每个同学愿意帮忙的好感度有高有低(注意: 小渊和小轩的好心程度没有定义,
+输入时用0表示), 可以用一个0-100的自然数来表示,
+数越大表示越好心.小渊和小轩希望尽可能找好心程度高的同学来帮忙传纸条,
+即找到来回两条传递路径, 使得这两条路径上同学的好心程度之和最大.现在, ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">meowjiao</div><div class="author-info__description">meowjiao-blog</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC4%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第4天补题报告">可达鸭2023国庆CSP-J复赛集训第4天补题报告</a><time datetime="2023-10-03T15:08:18.000Z" title="Created 2023-10-03 23:08:18">2023-10-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC3%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第3天补题报告">可达鸭2023国庆CSP-J复赛集训第3天补题报告</a><time datetime="2023-10-03T07:53:47.000Z" title="Created 2023-10-03 15:53:47">2023-10-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/03/%E5%8F%AF%E8%BE%BE%E9%B8%AD2023%E5%9B%BD%E5%BA%86CSP-J%E5%A4%8D%E8%B5%9B%E9%9B%86%E8%AE%AD%E7%AC%AC2%E5%A4%A9%E8%A1%A5%E9%A2%98%E6%8A%A5%E5%91%8A/" title="可达鸭2023国庆CSP-J复赛集训第2天补题报告">可达鸭2023国庆CSP-J复赛集训第2天补题报告</a><time datetime="2023-10-03T07:51:54.000Z" title="Created 2023-10-03 15:51:54">2023-10-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/15/NoneNews-%E7%AC%AC1%E6%9C%9F/" title="NoneNews第1期">NoneNews第1期</a><time datetime="2023-08-15T06:16:13.000Z" title="Created 2023-08-15 14:16:13">2023-08-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/18/%E2%95%AB%D1%8E%E2%94%A4%D1%94%E2%95%92%C2%A4%E2%95%96%E2%95%9C%E2%95%A8%E2%95%AC/" title="最大正方形">最大正方形</a><time datetime="2023-07-18T02:04:35.000Z" title="Created 2023-07-18 10:04:35">2023-07-18</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">October 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">July 2023</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">June 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">16</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-10-04T01:58:50.120Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By meowjiao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
